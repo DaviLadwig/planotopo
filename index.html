@@ -12,65 +12,61 @@
 <body class="bg-gray-100">
 
     <!-- HEADER -->
-    <header class="bg-white shadow-md fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <a href="#" class="brand">
+                <img src="./assets/icon/logo-planotopo.png" alt="Plano Topo Equipamentos" class="brand-logo">
+                <div class="brand-text">
+                </div>
+            </a>
 
-            <!-- LOGO -->
-            <div class="flex items-center gap-2 logo">
-                <img src="assets/icon/logo-planotopo.png" alt="">
-            </div>
-
-            <!-- MENU DESKTOP -->
-            <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
-                <a href="#" class="link-nav">Início</a>
-                <a href="#" class="link-nav">Equipamentos</a>
-                <a href="#" class="link-nav">Como Funciona</a>
-                <a href="#" class="link-nav">Contato</a>
+            <nav class="desktop-nav">
+                <a href="#inicio">Início</a>
+                <a href="#equipamentos">Equipamentos</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#contato">Contato</a>
             </nav>
 
-            <!-- BOTÃO CTA -->
-            <div class="hidden md:block">
-                <a href="#"
-                    class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">WhatsApp</a>
+            <div class="header-actions">
+                <a href="#" class="header-whatsapp-btn">Solicitar orçamento</a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
-            <!-- HAMBURGUER -->
-            <button id="menuBtn" class="md:hidden flex flex-col gap-1">
-                <span class="w-6 h-0.5 bg-black"></span>
-                <span class="w-6 h-0.5 bg-black"></span>
-                <span class="w-6 h-0.5 bg-black"></span>
-            </button>
-
         </div>
     </header>
 
-    <!-- OVERLAY -->
-    <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-    <!-- MENU MOBILE -->
-    <div id="mobileMenu"
-        class="fixed top-0 right-0 w-72 h-full bg-white shadow-lg transform translate-x-full transition duration-300 z-50">
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-top">
+            <div class="mobile-brand">
+                <img src="./assets/images/logo.png" alt="Plano Topo Equipamentos">
+                <div>
+                    <strong>Plano Topo</strong>
+                    <span>Equipamentos para obra</span>
+                </div>
+            </div>
 
-        <!-- HEADER MENU -->
-        <div class="flex justify-between items-center p-4 border-b">
-            <span class="font-bold text-lg">Menu</span>
-            <button id="closeBtn" class="text-2xl">&times;</button>
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
+                &times;
+            </button>
         </div>
 
-        <!-- LINKS -->
-        <nav class="flex flex-col p-4 gap-4 text-gray-700">
-            <a href="#" class="link-nav">Início</a>
-            <a href="#" class="link-nav">Equipamentos</a>
-            <a href="#" class="link-nav">Como Funciona</a>
-            <a href="#" class="link-nav">Contato</a>
+        <nav class="mobile-nav">
+            <a href="#inicio">Início</a>
+            <a href="#equipamentos">Equipamentos</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#contato">Contato</a>
         </nav>
 
-        <!-- CTA -->
-        <div class="p-4">
-            <a href="#"
-                class="block text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Falar no
-                WhatsApp</a>
+        <div class="mobile-menu-footer">
+            <a href="#" class="mobile-whatsapp-btn">Falar no WhatsApp</a>
         </div>
+    </aside>
 
     </div>
 
@@ -126,7 +122,7 @@
                         <a href="#pedido" class="btn btn-secondary">Montar pedido</a>
                     </div>
                 </div>
-            </div>
+            </div><br>
 
             <button class="hero-arrow hero-arrow-left" id="prevSlide" aria-label="Banner anterior">
                 &#10094;
@@ -195,6 +191,140 @@
         </div>
     </div>
 
+
+    <!--cta final-->
+    <section class="how-it-works">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Como funciona</h2>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="icon">✔</div>
+                    <h3>Escolha o equipamento</h3>
+                    <p>Navegue pelo catálogo e selecione o que precisa</p>
+                </div>
+
+                <div class="step">
+                    <div class="icon">🛒</div>
+                    <h3>Monte seu pedido</h3>
+                    <p>Adicione os itens e quantidades desejadas</p>
+                </div>
+
+                <div class="step">
+                    <div class="icon">💬</div>
+                    <h3>Receba no WhatsApp</h3>
+                    <p>Envie o pedido e receba o orçamento rapidamente</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="benefits">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Por que escolher a Plano Topo?</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <h3>Equipamentos revisados</h3>
+                    <p>Todos os equipamentos passam por manutenção e inspeção</p>
+                </div>
+
+                <div class="benefit">
+                    <h3>Atendimento rápido</h3>
+                    <p>Retorno ágil direto pelo WhatsApp</p>
+                </div>
+
+                <div class="benefit">
+                    <h3>Suporte confiável</h3>
+                    <p>Equipe pronta para te ajudar durante a locação</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="cta-final">
+        <div class="container">
+
+            <h2>Pronto para agilizar sua obra?</h2>
+            <p>Solicite agora seu orçamento em poucos segundos</p>
+
+            <a href="#" class="cta-button">
+                Solicitar orçamento no WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+    <!--RODAPE-->
+    <footer class="site-footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="./assets/icon/logo-planotopo.png" alt="Plano Topo Equipamentos">
+                        <div>
+                            <strong>Plano Topo</strong>
+                            <span>Locação e manutenção de equipamentos</span>
+                        </div>
+                    </a>
+
+                    <p>
+                        Soluções em locação de equipamentos para obras, com atendimento ágil,
+                        equipamentos revisados e suporte confiável para sua operação.
+                    </p>
+
+                    <a href="#" class="footer-whatsapp-btn">Solicitar orçamento</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#equipamentos">Equipamentos</a></li>
+                        <li><a href="#categorias">Categorias</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Betoneiras</a></li>
+                        <li><a href="#">Marteletes</a></li>
+                        <li><a href="#">Geradores</a></li>
+                        <li><a href="#">Andaimes</a></li>
+                        <li><a href="#">Compactadores</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li>WhatsApp: (00) 00000-0000</li>
+                        <li>Email: contato@planotopo.com.br</li>
+                        <li>Atendimento: Segunda a Sábado</li>
+                        <li>Fortaleza - CE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Plano Topo Equipamentos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    
     <!-- MODAL -->
     <div class="modal" id="modal">
         <div class="modal-content">

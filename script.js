@@ -1,22 +1,55 @@
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const overlay = document.getElementById('overlay');
-const closeBtn = document.getElementById('closeBtn');
+const siteHeader = document.getElementById("siteHeader");
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+const mobileMenuClose = document.getElementById("mobileMenuClose");
+const mobileMenuLinks = document.querySelectorAll(".mobile-nav a");
 
-function openMenu() {
-    mobileMenu.classList.remove('translate-x-full');
-    overlay.classList.remove('hidden');
+function openMobileMenu() {
+    mobileMenu.classList.add("active");
+    mobileMenuOverlay.classList.add("active");
+    menuToggle.setAttribute("aria-expanded", "true");
+    mobileMenu.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
 }
 
-function closeMenu() {
-    mobileMenu.classList.add('translate-x-full');
-    overlay.classList.add('hidden');
+function closeMobileMenu() {
+    mobileMenu.classList.remove("active");
+    mobileMenuOverlay.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    mobileMenu.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
 }
 
-menuBtn.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
-overlay.addEventListener('click', closeMenu);
+if (menuToggle) {
+    menuToggle.addEventListener("click", openMobileMenu);
+}
 
+if (mobileMenuClose) {
+    mobileMenuClose.addEventListener("click", closeMobileMenu);
+}
+
+if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+}
+
+mobileMenuLinks.forEach(link => {
+    link.addEventListener("click", closeMobileMenu);
+});
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 12) {
+        siteHeader.classList.add("scrolled");
+    } else {
+        siteHeader.classList.remove("scrolled");
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
+        closeMobileMenu();
+    }
+});
 //============================================
 //HERO SECTION CARROSSEL
 
