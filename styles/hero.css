@@ -1,0 +1,268 @@
+.hero {
+  padding-top: 88px;
+  background: #f5f7f8;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  min-height: 520px;
+  max-height: 760px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.02) saturate(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(8, 17, 14, 0.82) 0%, rgba(8, 17, 14, 0.58) 35%, rgba(8, 17, 14, 0.18) 70%, rgba(8, 17, 14, 0.08) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  width: min(640px, 88%);
+  color: #ffffff;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(124, 177, 55, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #b7df61;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
+}
+
+.hero-content h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero-content p {
+  max-width: 580px;
+  margin: 0 0 28px;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.98rem;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #7cb137;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(124, 177, 55, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #6ea12f;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: 0.25s ease;
+}
+
+.hero-arrow:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.hero-arrow-left {
+  left: 24px;
+}
+
+.hero-arrow-right {
+  right: 24px;
+}
+
+.hero-dots {
+  position: absolute;
+  left: 7%;
+  bottom: 34px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.35);
+  transition: 0.25s ease;
+}
+
+.hero-dot.active {
+  width: 34px;
+  border-radius: 999px;
+  background: #7cb137;
+}
+
+@media (max-width: 991px) {
+  .hero-slider {
+    height: 78vh;
+    min-height: 500px;
+  }
+
+  .hero-content {
+    left: 24px;
+    right: 24px;
+    width: auto;
+  }
+
+  .hero-arrow-left {
+    left: 14px;
+  }
+
+  .hero-arrow-right {
+    right: 14px;
+  }
+
+  .hero-dots {
+    left: 24px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 80px;
+  }
+
+  .hero-slider {
+    height: 72vh;
+    min-height: 460px;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(8, 17, 14, 0.4) 0%, rgba(8, 17, 14, 0.68) 42%, rgba(8, 17, 14, 0.88) 100%);
+  }
+
+  .hero-content h1 {
+    margin-bottom: 14px;
+  }
+
+  .hero-content p {
+    margin-bottom: 22px;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-slider {
+    min-height: 420px;
+  }
+
+  .hero-content {
+    top: auto;
+    bottom: 74px;
+    transform: none;
+  }
+
+  .hero-badge {
+    margin-bottom: 14px;
+    padding: 8px 14px;
+    font-size: 0.84rem;
+  }
+
+  .hero-dots {
+    bottom: 20px;
+  }
+}
