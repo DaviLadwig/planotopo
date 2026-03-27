@@ -124,116 +124,509 @@ dots.forEach((dot, index) => {
 //MARKETPLACE JS
 const equipmentData = [
     {
-        id: 1,
-        nome: "Andaimes",
-        categoria: "Estrutura",
-        descricao: "Solução ideal para trabalhos em altura com mais estabilidade, segurança e praticidade na obra.",
+        id: 101,
+        nome: "Betoneira 400L",
+        categoria: "Betoneiras",
+        descricao: "Betoneira Menegotti de 400 litros ideal para preparo de concreto e argamassa em obras de pequeno e médio porte.",
         imagens: [
-            "./assets/images/andaimes-1.WEBP",
-            "./assets/images/andaimes-2.WEBP",
-            "./assets/images/andaimes-3.WEBP"
-        ]
+            "./assets/images/betoneira-400-1.jpg",
+            "./assets/images/betoneira-400-2.jpg",
+            "./assets/images/betoneira-400-3.jpg"
+        ],
+        fichaTecnica: {
+            Marca: "Menegotti",
+            Capacidade: "400 litros",
+            Aplicação: "Concreto e argamassa",
+            Uso: "Obras residenciais e comerciais",
+            Alimentação: "Elétrica",
+            Disponibilidade: "Sob consulta"
+        }
     },
     {
-        id: 2,
-        nome: "Betoneira 400L Menegote",
+        id: 102,
+        nome: "Betoneira 600L",
         categoria: "Betoneiras",
-        descricao: "Indicada para preparo de concreto e argamassa em obras de pequeno e médio porte, com excelente desempenho e robustez.",
-        imagens: [
-            "./assets/images/betoneira-400-1.WEBP",
-            "./assets/images/betoneira-400-2.WEBP",
-            "./assets/images/betoneira-400-3.WEBP"
-        ]
-    },
-    {
-        id: 3,
-        nome: "Betoneira 600L Menegote",
-        categoria: "Betoneiras",
-        descricao: "Modelo com maior capacidade para obras com alta demanda, oferecendo produtividade e resistência no uso contínuo.",
+        descricao: "Betoneira Menegotti de 600 litros para maior produtividade em obras de médio e grande porte.",
         imagens: [
             "./assets/images/betoneira-600-1.jpg",
-            "./assets/images/betoneira-600-2.JFIF",
-            "./assets/images/betoneira-600-3.png"
-        ]
+            "./assets/images/betoneira-600-2.jpg",
+            "./assets/images/betoneira-600-3.jpg"
+        ],
+        fichaTecnica: {
+            Marca: "Menegotti",
+            Capacidade: "600 litros",
+            Aplicação: "Concreto e argamassa",
+            Uso: "Obras de médio e grande porte",
+            Alimentação: "Elétrica",
+            Disponibilidade: "Sob consulta"
+        }
     },
     {
-        id: 4,
+        id: 103,
         nome: "Mini Grua",
         categoria: "Elevação",
-        descricao: "Equipamento ideal para elevação de materiais em obras, trazendo mais agilidade e segurança na movimentação.",
+        descricao: "Mini grua para movimentação vertical de materiais em obras, trazendo mais agilidade e segurança.",
         imagens: [
-            "./assets/images/minigrua-1.jpg",
-            "./assets/images/minigrua-2.WEBP",
-            "./assets/images/minigrua-3.WEBP"
-        ]
+            "./assets/images/mini-grua-1.jpg",
+            "./assets/images/mini-grua-2.jpg",
+            "./assets/images/mini-grua-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Elevação de materiais",
+            Estrutura: "Metálica",
+            Uso: "Obras residenciais e comerciais",
+            Instalação: "Em andaime ou laje",
+            Capacidade: "Sob consulta"
+        }
     },
     {
-        id: 5,
+        id: 104,
         nome: "Guarda Corpo",
         categoria: "Segurança",
-        descricao: "Sistema de proteção coletiva para áreas elevadas, fundamental para reduzir riscos e atender normas de segurança.",
+        descricao: "Sistema de guarda corpo para proteção em áreas elevadas e bordas de lajes.",
         imagens: [
-            "./assets/images/guardacorpo-1.WEBP",
-            "./assets/images/guardacorpo-2.WEBP",
-            "./assets/images/guardacorpo-3.WEBP"
-        ]
+            "./assets/images/guarda-corpo-1.jpg",
+            "./assets/images/guarda-corpo-2.jpg",
+            "./assets/images/guarda-corpo-3.jpg"
+        ],
+        fichaTecnica: {
+            Material: "Aço galvanizado",
+            Aplicação: "Proteção em altura",
+            Uso: "Lajes, sacadas e andaimes",
+            Norma: "NR-18",
+            Disponibilidade: "Sob consulta"
+        }
     },
+
     {
-        id: 6,
-        nome: "Container",
+        id: 105,
+        nome: "Piso Metálico",
         categoria: "Estrutura",
-        descricao: "Container para apoio de obra com dimensões aproximadas de 2,97m de altura, 6,0m de profundidade e 2,35m de comprimento.",
+        descricao: "Piso metálico para andaimes e estruturas temporárias, oferecendo segurança e estabilidade.",
         imagens: [
-            "./assets/images/container-1.png",
-            "./assets/images/container-2.png",
-            "./assets/images/container-3.png"
-        ]
+            "./assets/images/piso-metalico-1.jpg",
+            "./assets/images/piso-metalico-2.jpg",
+            "./assets/images/piso-metalico-3.jpg"
+        ],
+        fichaTecnica: {
+            Material: "Aço",
+            Aplicação: "Andaimes e passarelas",
+            Acabamento: "Galvanizado",
+            Uso: "Obras em altura"
+        }
     },
     {
-        id: 7,
-        nome: "Gerador 8kVA",
+        id: 106,
+        nome: "Escora 2m a 3,5m",
+        categoria: "Estrutura",
+        descricao: "Escora metálica regulável de 2 a 3,5 metros para sustentação de lajes e formas.",
+        imagens: [
+            "./assets/images/escora-35-1.jpg",
+            "./assets/images/escora-35-2.jpg",
+            "./assets/images/escora-35-3.jpg"
+        ],
+        fichaTecnica: {
+            Altura: "2,0 a 3,5 metros",
+            Material: "Aço",
+            Aplicação: "Escoramento de lajes",
+            Regulagem: "Manual"
+        }
+    },
+    {
+        id: 107,
+        nome: "Escora 2m a 4,5m",
+        categoria: "Estrutura",
+        descricao: "Escora metálica regulável de 2 a 4,5 metros para escoramento em grandes alturas.",
+        imagens: [
+            "./assets/images/escora-45-1.jpg",
+            "./assets/images/escora-45-2.jpg",
+            "./assets/images/escora-45-3.jpg"
+        ],
+        fichaTecnica: {
+            Altura: "2,0 a 4,5 metros",
+            Material: "Aço",
+            Aplicação: "Escoramento de lajes e vigas",
+            Regulagem: "Manual"
+        }
+    },
+    {
+        id: 108,
+        nome: "Gerador 5,5 kVA",
         categoria: "Energia",
-        descricao: "Gerador robusto para alimentar equipamentos e estruturas temporárias em obras e eventos.",
+        descricao: "Gerador portátil de 5,5 kVA para alimentação de ferramentas e equipamentos em obra.",
         imagens: [
-            "./assets/images/gerador-8kva-1.jpg",
-            "./assets/images/gerador-8kva-2.jpg",
-            "./assets/images/gerador-8kva-3.jpg"
-        ]
+            "./assets/images/gerador-55-1.jpg",
+            "./assets/images/gerador-55-2.jpg",
+            "./assets/images/gerador-55-3.jpg"
+        ],
+        fichaTecnica: {
+            Potência: "5,5 kVA",
+            Combustível: "Gasolina",
+            Uso: "Ferramentas e iluminação",
+            Partida: "Manual"
+        }
     },
     {
-        id: 8,
-        nome: "Compactador de Percussão Búfalo",
+        id: 109,
+        nome: "Gerador 6 kVA",
+        categoria: "Energia",
+        descricao: "Gerador de 6 kVA indicado para canteiros de obra e equipamentos de maior consumo.",
+        imagens: [
+            "./assets/images/gerador-6-1.jpg",
+            "./assets/images/gerador-6-2.jpg",
+            "./assets/images/gerador-6-3.jpg"
+        ],
+        fichaTecnica: {
+            Potência: "6 kVA",
+            Combustível: "Gasolina",
+            Uso: "Equipamentos de obra",
+            Partida: "Manual"
+        }
+    },
+    {
+        id: 110,
+        nome: "Gerador 8 kVA",
+        categoria: "Energia",
+        descricao: "Gerador de 8 kVA para maior autonomia e alimentação de múltiplos equipamentos.",
+        imagens: [
+            "./assets/images/gerador-8-1.jpg",
+            "./assets/images/gerador-8-2.jpg",
+            "./assets/images/gerador-8-3.jpg"
+        ],
+        fichaTecnica: {
+            Potência: "8 kVA",
+            Combustível: "Gasolina/Diesel",
+            Uso: "Canteiros de obra",
+            Partida: "Elétrica"
+        }
+    },
+    {
+        id: 111,
+        nome: "Compactador de Percussão",
         categoria: "Compactação",
-        descricao: "Compactador indicado para solo e áreas de difícil acesso, entregando eficiência e alto rendimento no serviço.",
+        descricao: "Compactador de percussão marca Buffalo para compactação de solo em áreas menores.",
         imagens: [
-            "./assets/images/compactador-bufalo-1.jpg",
-            "./assets/images/compactador-bufalo-2.jpg",
-            "./assets/images/compactador-bufalo-3.jpg"
-        ]
+            "./assets/images/compactador-percussao-1.jpg",
+            "./assets/images/compactador-percussao-2.jpg",
+            "./assets/images/compactador-percussao-3.jpg"
+        ],
+        fichaTecnica: {
+            Marca: "Buffalo",
+            Aplicação: "Compactação de solo",
+            Uso: "Valas e áreas estreitas",
+            Combustível: "Gasolina"
+        }
     },
     {
-        id: 9,
+        id: 112,
+        nome: "Compactador de Placa",
+        categoria: "Compactação",
+        descricao: "Compactador de placa para compactação de pisos, brita e solo em áreas planas.",
+        imagens: [
+            "./assets/images/compactador-placa-1.jpg",
+            "./assets/images/compactador-placa-2.jpg",
+            "./assets/images/compactador-placa-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Solo e pavimentação",
+            Uso: "Áreas planas",
+            Combustível: "Gasolina",
+            Estrutura: "Base metálica"
+        }
+    },
+    {
+        id: 113,
+        nome: "Cortador de Piso Serra Clip",
+        categoria: "Corte",
+        descricao: "Cortador de piso tipo Serra Clip para cortes precisos em concreto e asfalto.",
+        imagens: [
+            "./assets/images/cortador-piso-1.jpg",
+            "./assets/images/cortador-piso-2.jpg",
+            "./assets/images/cortador-piso-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Corte de concreto e asfalto",
+            Disco: "Sob consulta",
+            Combustível: "Gasolina",
+            Uso: "Obras e pavimentação"
+        }
+    },
+    {
+        id: 114,
+        nome: "Talha 1 Tonelada",
+        categoria: "Elevação",
+        descricao: "Talha para elevação de cargas de até 1 tonelada.",
+        imagens: [
+            "./assets/images/talha-1t-1.jpg",
+            "./assets/images/talha-1t-2.jpg",
+            "./assets/images/talha-1t-3.jpg"
+        ],
+        fichaTecnica: {
+            Capacidade: "1 tonelada",
+            Aplicação: "Movimentação de cargas",
+            Estrutura: "Metálica"
+        }
+    },
+    {
+        id: 115,
+        nome: "Talha 3 Toneladas",
+        categoria: "Elevação",
+        descricao: "Talha reforçada para movimentação de cargas de até 3 toneladas.",
+        imagens: [
+            "./assets/images/talha-3t-1.jpg",
+            "./assets/images/talha-3t-2.jpg",
+            "./assets/images/talha-3t-3.jpg"
+        ],
+        fichaTecnica: {
+            Capacidade: "3 toneladas",
+            Aplicação: "Elevação de cargas pesadas",
+            Estrutura: "Metálica"
+        }
+    },
+    {
+        id: 116,
+        nome: "Balancinho",
+        categoria: "Elevação",
+        descricao: "Balancinho suspenso para trabalhos em fachadas e manutenção predial.",
+        imagens: [
+            "./assets/images/balancinho-1.jpg",
+            "./assets/images/balancinho-2.jpg",
+            "./assets/images/balancinho-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Trabalhos em altura",
+            Uso: "Fachadas e manutenção",
+            Capacidade: "Sob consulta"
+        }
+    },
+    {
+        id: 117,
+        nome: "Cadeira Suspensa",
+        categoria: "Elevação",
+        descricao: "Cadeira suspensa para trabalhos de acabamento e manutenção em altura.",
+        imagens: [
+            "./assets/images/cadeira-1.jpg",
+            "./assets/images/cadeira-2.jpg",
+            "./assets/images/cadeira-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Pintura e manutenção",
+            Uso: "Trabalhos em altura",
+            Segurança: "Compatível com cinto e trava-quedas"
+        }
+    },
+    {
+        id: 118,
+        nome: "Alisadora de Piso",
+        categoria: "Acabamento",
+        descricao: "Alisadora de piso para acabamento e nivelamento de concreto fresco.",
+        imagens: [
+            "./assets/images/alisadora-1.jpg",
+            "./assets/images/alisadora-2.jpg",
+            "./assets/images/alisadora-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Acabamento de concreto",
+            Combustível: "Gasolina",
+            Uso: "Pisos industriais e residenciais"
+        }
+    },
+    {
+        id: 119,
+        nome: "Politriz",
+        categoria: "Acabamento",
+        descricao: "Politriz para polimento e acabamento de superfícies.",
+        imagens: [
+            "./assets/images/politriz-1.jpg",
+            "./assets/images/politriz-2.jpg",
+            "./assets/images/politriz-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Polimento",
+            Uso: "Pisos e superfícies",
+            Alimentação: "Elétrica"
+        }
+    },
+    {
+        id: 120,
+        nome: "Motor Acionador para Mangote",
+        categoria: "Concreto",
+        descricao: "Motor acionador utilizado em mangotes vibradores para concretagem.",
+        imagens: [
+            "./assets/images/motor-acionador-1.jpg",
+            "./assets/images/motor-acionador-2.jpg",
+            "./assets/images/motor-acionador-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Mangote vibrador",
+            Alimentação: "Elétrica",
+            Uso: "Concretagem"
+        }
+    },
+    {
+        id: 121,
+        nome: "Motobomba",
+        categoria: "Hidráulico",
+        descricao: "Motobomba para sucção e remoção de água em obras e terrenos.",
+        imagens: [
+            "./assets/images/motobomba-1.jpg",
+            "./assets/images/motobomba-2.jpg",
+            "./assets/images/motobomba-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Remoção de água",
+            Combustível: "Gasolina",
+            Uso: "Obras e drenagem"
+        }
+    },
+    {
+        id: 122,
+        nome: "Martelete 2,5kg",
+        categoria: "Demolição",
+        descricao: "Martelete leve de 2,5kg ideal para pequenos reparos e demolições leves.",
+        imagens: [
+            "./assets/images/martelete-25-1.jpg",
+            "./assets/images/martelete-25-2.jpg",
+            "./assets/images/martelete-25-3.jpg"
+        ],
+        fichaTecnica: {
+            Peso: "2,5 kg",
+            Uso: "Pequenas demolições",
+            Alimentação: "Elétrica"
+        }
+    },
+    {
+        id: 123,
+        nome: "Martelete 7kg",
+        categoria: "Demolição",
+        descricao: "Martelete de 7kg para perfuração e demolição em concreto e alvenaria.",
+        imagens: [
+            "./assets/images/martelete-7-1.jpg",
+            "./assets/images/martelete-7-2.jpg",
+            "./assets/images/martelete-7-3.jpg"
+        ],
+        fichaTecnica: {
+            Peso: "7 kg",
+            Uso: "Demolição e perfuração",
+            Alimentação: "Elétrica"
+        }
+    },
+    {
+        id: 124,
+        nome: "Martelete 8kg",
+        categoria: "Demolição",
+        descricao: "Martelete de 8kg para serviços intensos em concreto.",
+        imagens: [
+            "./assets/images/martelete-8-1.jpg",
+            "./assets/images/martelete-8-2.jpg",
+            "./assets/images/martelete-8-3.jpg"
+        ],
+        fichaTecnica: {
+            Peso: "8 kg",
+            Uso: "Concreto e alvenaria",
+            Alimentação: "Elétrica"
+        }
+    },
+    {
+        id: 125,
         nome: "Martelete 11kg",
         categoria: "Demolição",
-        descricao: "Equipamento versátil para demolições e perfurações em concreto, alvenaria e superfícies de alta resistência.",
+        descricao: "Martelete de 11kg para demolições pesadas e abertura de canaletas.",
         imagens: [
-            "./assets/images/martelete-11kg-1.jpg",
-            "./assets/images/martelete-11kg-2.jpg",
-            "./assets/images/martelete-11kg-3.jpg"
-        ]
+            "./assets/images/martelete-11-1.jpg",
+            "./assets/images/martelete-11-2.jpg",
+            "./assets/images/martelete-11-3.jpg"
+        ],
+        fichaTecnica: {
+            Peso: "11 kg",
+            Uso: "Demolições pesadas",
+            Alimentação: "Elétrica"
+        }
     },
     {
-        id: 10,
+        id: 126,
+        nome: "Martelete 15kg",
+        categoria: "Demolição",
+        descricao: "Martelete de 15kg para rompimento de concreto e pisos.",
+        imagens: [
+            "./assets/images/martelete-15-1.jpg",
+            "./assets/images/martelete-15-2.jpg",
+            "./assets/images/martelete-15-3.jpg"
+        ],
+        fichaTecnica: {
+            Peso: "15 kg",
+            Uso: "Rompimento de concreto",
+            Alimentação: "Elétrica"
+        }
+    },
+    {
+        id: 127,
+        nome: "Martelete 30kg",
+        categoria: "Demolição",
+        descricao: "Martelete de 30kg para demolições pesadas e alto desempenho.",
+        imagens: [
+            "./assets/images/martelete-30-1.jpg",
+            "./assets/images/martelete-30-2.jpg",
+            "./assets/images/martelete-30-3.jpg"
+        ],
+        fichaTecnica: {
+            Peso: "30 kg",
+            Uso: "Demolição pesada",
+            Alimentação: "Elétrica"
+        }
+    },
+    {
+        id: 128,
+        nome: "Alisador de Concreto",
+        categoria: "Acabamento",
+        descricao: "Equipamento para nivelamento e acabamento final do concreto.",
+        imagens: [
+            "./assets/images/alisador-concreto-1.jpg",
+            "./assets/images/alisador-concreto-2.jpg",
+            "./assets/images/alisador-concreto-3.jpg"
+        ],
+        fichaTecnica: {
+            Aplicação: "Acabamento de concreto",
+            Uso: "Lajes e pisos",
+            Combustível: "Gasolina"
+        }
+    },
+    {
+        id: 129,
+        nome: "Barra de Ancoragem",
+        categoria: "Segurança",
+        descricao: "Barra de ancoragem para sistemas de proteção e trabalho em altura.",
+        imagens: [
+            "./assets/images/barra-ancoragem-1.jpg",
+            "./assets/images/barra-ancoragem-2.jpg",
+            "./assets/images/barra-ancoragem-3.jpg"
+        ],
+        fichaTecnica: {
+            Material: "Aço",
+            Aplicação: "Trabalho em altura",
+            Compatibilidade: "Cintos e trava-quedas"
+        }
+    },
+    {
+        id: 130,
         nome: "Bomba Submersa",
         categoria: "Hidráulico",
-        descricao: "Ideal para drenagem e retirada de água em valas, poços, reservatórios e áreas alagadas na obra.",
+        descricao: "Bomba submersa para drenagem e remoção de água em poços, valas e obras.",
         imagens: [
             "./assets/images/bomba-submersa-1.jpg",
             "./assets/images/bomba-submersa-2.jpg",
             "./assets/images/bomba-submersa-3.jpg"
-        ]
+        ],
+        fichaTecnica: {
+            Aplicação: "Drenagem",
+            Alimentação: "Elétrica",
+            Uso: "Poços, valas e reservatórios"
+        }
     }
+
+
 ];
+
 
 const categoriesContainer = document.getElementById("categories");
 const productsContainer = document.getElementById("products");
@@ -416,8 +809,8 @@ function finishOrderOnWhatsapp() {
         alert("Adicione pelo menos um equipamento ao pedido.");
         return;
     }
-
-    const phone = "5585999999999"; // troque pelo número real
+//NUMERO WHATS---------------------------------------------------------------------------------------------------------------
+    const phone = "5598991713898"; // troque pelo número real
     const message = generateWhatsappMessage();
     const url = `https://wa.me/${phone}?text=${message}`;
 
@@ -456,6 +849,24 @@ function getFilteredProducts() {
 
 function renderProducts() {
     const filteredProducts = getFilteredProducts();
+
+    function openModal(product) {
+        currentProduct = product;
+        currentImageIndex = 0;
+
+        modalCategory.textContent = product.categoria;
+        modalTitle.textContent = product.nome;
+        modalDescription.textContent = product.descricao;
+
+        renderSpecs(product);
+        updateMainImage();
+
+        if (modal) {
+            modal.classList.add("active");
+        }
+
+        document.body.style.overflow = "hidden";
+    }
 
     productsContainer.innerHTML = filteredProducts
         .map(item => `
@@ -585,6 +996,32 @@ document.addEventListener("keydown", event => {
 });
 
 const addToOrderBtn = document.getElementById("addToOrderBtn");
+const modalSpecs = document.getElementById("modalSpecs");
+
+//ficha tecnica do modal---------------------------------------------
+function renderSpecs(product) {
+    if (!modalSpecs) return;
+
+    if (!product.fichaTecnica) {
+        modalSpecs.innerHTML = `
+      <div class="product-spec-item">
+        <div class="product-spec-label">Informações</div>
+        <div class="product-spec-value">Ficha técnica disponível sob consulta.</div>
+      </div>
+    `;
+        return;
+    }
+
+    modalSpecs.innerHTML = Object.entries(product.fichaTecnica)
+        .map(([label, value]) => `
+      <div class="product-spec-item">
+        <div class="product-spec-label">${label}</div>
+        <div class="product-spec-value">${value}</div>
+      </div>
+    `)
+        .join("");
+}
+//-------------------------------------------------------
 
 addToOrderBtn.addEventListener("click", () => {
     if (!currentProduct) return;
