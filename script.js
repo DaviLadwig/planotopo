@@ -184,9 +184,9 @@ const equipmentData = [
         categoria: "Estrutura",
         descricao: "Container para apoio de obra com dimensões aproximadas de 2,97m de altura, 6,0m de profundidade e 2,35m de comprimento.",
         imagens: [
-            "./assets/images/container-1.WEBP",
-            "./assets/images/container-2.WEBP",
-            "./assets/images/container-3.WEBP"
+            "./assets/images/container-1.png",
+            "./assets/images/container-2.png",
+            "./assets/images/container-3.png"
         ]
     },
     {
@@ -249,10 +249,180 @@ const galleryThumbs = document.getElementById("galleryThumbs");
 const prevImageBtn = document.getElementById("prevImageBtn");
 const nextImageBtn = document.getElementById("nextImageBtn");
 
+
 let activeCategory = "Todos";
 let currentProduct = null;
 let currentImageIndex = 0;
 
+
+//FUNÇÕES DO CARRINHO
+
+const floatingCart = document.getElementById("floatingCart");
+const floatingCartCount = document.getElementById("floatingCartCount");
+const cartSidebar = document.getElementById("cartSidebar");
+const cartOverlay = document.getElementById("cartOverlay");
+const cartClose = document.getElementById("cartClose");
+const cartItems = document.getElementById("cartItems");
+const cartTotalItems = document.getElementById("cartTotalItems");
+const finishOnWhatsapp = document.getElementById("finishOnWhatsapp");
+
+let cart = [];
+
+
+function openCart() {
+    cartSidebar.classList.add("active");
+    cartOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeCart() {
+    cartSidebar.classList.remove("active");
+    cartOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+function addToCart(product) {
+    const existingItem = cart.find(item => item.id === product.id);
+
+    if (existingItem) {
+        existingItem.quantidade += 1;
+    } else {
+        cart.push({
+            id: product.id,
+            nome: product.nome,
+            categoria: product.categoria,
+            imagem: product.imagens[0],
+            quantidade: 1
+        });
+    }
+
+    updateCartUI();
+}
+
+function increaseItem(productId) {
+    const item = cart.find(product => product.id === productId);
+    if (!item) return;
+
+    item.quantidade += 1;
+    updateCartUI();
+}
+
+function decreaseItem(productId) {
+    const item = cart.find(product => product.id === productId);
+    if (!item) return;
+
+    item.quantidade -= 1;
+
+    if (item.quantidade <= 0) {
+        cart = cart.filter(product => product.id !== productId);
+    }
+
+    updateCartUI();
+}
+
+function removeItem(productId) {
+    cart = cart.filter(product => product.id !== productId);
+    updateCartUI();
+}
+
+function getCartTotalItems() {
+    return cart.reduce((total, item) => total + item.quantidade, 0);
+}
+
+function updateCartUI() {
+    const totalItems = getCartTotalItems();
+
+    if (floatingCartCount) {
+        floatingCartCount.textContent = totalItems;
+    }
+
+    if (cartTotalItems) {
+        cartTotalItems.textContent = totalItems;
+    }
+
+    if (!cartItems) return;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = `
+      <div class="cart-empty">
+        <p>Seu carrinho está vazio.</p>
+        <span>Adicione equipamentos para montar seu pedido.</span>
+      </div>
+    `;
+        return;
+    }
+
+    cartItems.innerHTML = cart
+        .map(item => `
+      <div class="cart-item">
+        <div class="cart-item-image">
+          <img src="${item.imagem}" alt="${item.nome}">
+        </div>
+
+        <div class="cart-item-info">
+          <h4>${item.nome}</h4>
+          <span>${item.categoria}</span>
+
+          <div class="cart-item-actions">
+            <div class="qty-controls">
+              <button class="qty-btn" data-decrease-id="${item.id}">-</button>
+              <div class="qty-value">${item.quantidade}</div>
+              <button class="qty-btn" data-increase-id="${item.id}">+</button>
+            </div>
+
+            <button class="remove-item-btn" data-remove-id="${item.id}">
+              Remover
+            </button>
+          </div>
+        </div>
+      </div>
+    `)
+        .join("");
+
+    const increaseButtons = cartItems.querySelectorAll("[data-increase-id]");
+    const decreaseButtons = cartItems.querySelectorAll("[data-decrease-id]");
+    const removeButtons = cartItems.querySelectorAll("[data-remove-id]");
+
+    increaseButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            increaseItem(Number(button.dataset.increaseId));
+        });
+    });
+
+    decreaseButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            decreaseItem(Number(button.dataset.decreaseId));
+        });
+    });
+
+    removeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            removeItem(Number(button.dataset.removeId));
+        });
+    });
+}
+
+function generateWhatsappMessage() {
+    if (cart.length === 0) return "";
+
+    const lines = cart.map(item => `- ${item.nome} — Quantidade: ${item.quantidade}`);
+
+    return `Olá! Gostaria de solicitar um orçamento para locação dos seguintes equipamentos:%0A%0A${lines.join("%0A")}`;
+}
+
+function finishOrderOnWhatsapp() {
+    if (cart.length === 0) {
+        alert("Adicione pelo menos um equipamento ao pedido.");
+        return;
+    }
+
+    const phone = "5585999999999"; // troque pelo número real
+    const message = generateWhatsappMessage();
+    const url = `https://wa.me/${phone}?text=${message}`;
+
+    window.open(url, "_blank");
+}
 function getCategories() {
     return ["Todos", ...new Set(equipmentData.map(item => item.categoria))];
 }
@@ -289,25 +459,54 @@ function renderProducts() {
 
     productsContainer.innerHTML = filteredProducts
         .map(item => `
-      <article class="product-card" data-id="${item.id}">
-        <div class="product-image">
-          <img src="${item.imagens[0]}" alt="${item.nome}">
-        </div>
-        <div class="product-body">
-          <h3>${item.nome}</h3>
-          <span>${item.categoria}</span>
-        </div>
-      </article>
-    `)
+            <article class="product-card" data-id="${item.id}">
+            <div class="product-image">
+                <img src="${item.imagens[0]}" alt="${item.nome}">
+            </div>
+
+            <div class="product-body">
+                <h3>${item.nome}</h3>
+                <span>${item.categoria}</span>
+
+                <div class="product-card-actions">
+                <button class="add-to-cart-btn" data-add-id="${item.id}">
+                    Adicionar
+                </button>
+                </div>
+            </div>
+            </article>
+        `)
         .join("");
 
     const cards = productsContainer.querySelectorAll(".product-card");
+    const addButtons = productsContainer.querySelectorAll(".add-to-cart-btn");
 
     cards.forEach(card => {
-        card.addEventListener("click", () => {
+        card.addEventListener("click", (event) => {
+            if (event.target.closest(".add-to-cart-btn")) return;
+
             const productId = Number(card.dataset.id);
             const selectedProduct = equipmentData.find(item => item.id === productId);
             openModal(selectedProduct);
+        });
+    });
+
+    addButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
+
+            const productId = Number(button.dataset.addId);
+            const selectedProduct = equipmentData.find(item => item.id === productId);
+
+            addToCart(selectedProduct);
+
+            button.classList.add("added");
+            button.textContent = "Adicionado";
+
+            setTimeout(() => {
+                button.classList.remove("added");
+                button.textContent = "Adicionar";
+            }, 900);
         });
     });
 }
@@ -339,6 +538,8 @@ function updateMainImage() {
 
     renderThumbs(currentProduct);
 }
+
+//MODAL==================================================================================================
 
 function openModal(product) {
     currentProduct = product;
@@ -383,5 +584,32 @@ document.addEventListener("keydown", event => {
     if (event.key === "ArrowLeft") showPrevImage();
 });
 
+const addToOrderBtn = document.getElementById("addToOrderBtn");
+
+addToOrderBtn.addEventListener("click", () => {
+    if (!currentProduct) return;
+
+    addToCart(currentProduct);
+    closeModal();
+    openCart();
+});
+
+if (floatingCart) {
+    floatingCart.addEventListener("click", openCart);
+}
+
+if (cartClose) {
+    cartClose.addEventListener("click", closeCart);
+}
+
+if (cartOverlay) {
+    cartOverlay.addEventListener("click", closeCart);
+}
+
+if (finishOnWhatsapp) {
+    finishOnWhatsapp.addEventListener("click", finishOrderOnWhatsapp);
+}
+
 renderCategories();
 renderProducts();
+updateCartUI();
