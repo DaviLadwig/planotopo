@@ -50,7 +50,7 @@ document.addEventListener("keydown", (event) => {
         closeMobileMenu();
     }
 });
-//============================================
+//================================================================================================================================
 //HERO SECTION CARROSSEL
 
 const slides = document.querySelectorAll(".hero-slide");
@@ -120,7 +120,7 @@ dots.forEach((dot, index) => {
     });
 });
 
-//==================================================================================
+//==================================================================================================================================
 //MARKETPLACE JS
 const equipmentData = [
     {
@@ -544,6 +544,23 @@ const equipmentData = [
             Compatibilidade: "Cintos e trava-quedas"
         }
     },
+        {
+        id: 127,
+        nome: "Container Almoxerifado",
+        categoria: "Containers",
+        descricao: "Container para gurdar e administrar equipamentos.",
+        imagens: [
+            "./assets/images/container-1.png",
+            "./assets/images/container-2.png",
+            "./assets/images/container-3.jpg"
+        ],
+        fichaTecnica: {
+            Material: "Aço corten",
+            Altura: "2,97 m",
+            Largura: "2,35 m",
+            Comprimento: "6 m"
+        }
+    }
 
 ];
 
