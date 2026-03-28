@@ -19,7 +19,7 @@
     color: #141f19;
 }
 
-.site-header.scrolled .desktop-nav a{
+.site-header.scrolled .desktop-nav a {
     color: #101820;
 }
 
@@ -61,7 +61,7 @@
     font-weight: 800;
 }
 
-.site-header.scrolled .brand-text strong{
+.site-header.scrolled .brand-text strong {
     color: #101820;
 }
 
@@ -178,7 +178,7 @@
     /* verde da marca */
 }
 
-.site-header.scrolled .menu-toggle{
+.site-header.scrolled .menu-toggle {
     background: #1018201e;
 }
 
@@ -326,8 +326,8 @@
     }
 
     .brand-logo {
-        width: 64px;
-        height: 64px;
+        width: 150px;
+        height: 84px;
         border-radius: 16px;
     }
 
@@ -342,6 +342,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .brand-logo {
+        width: 150px;
+        height: 84px;
+
+    }
+}
 
 
 @media (max-width: 560px) {
