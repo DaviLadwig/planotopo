@@ -34,7 +34,7 @@
 }
 
 .add-to-cart-btn.added {
-    background: #1f7a3f;
+    background: #1f337a;
 }
 
 /* CARRINHO FLUTUANTE */
@@ -48,7 +48,7 @@
     border: none;
     border-radius: 50%;
     background: linear-gradient(135deg, #3c67c4, #382fa1);
-    box-shadow: 0 18px 34px rgba(124, 177, 55, 0.34);
+    box-shadow: 0 18px 34px rgba(55, 67, 177, 0.34);
     cursor: pointer;
     display: flex;
     align-items: center;

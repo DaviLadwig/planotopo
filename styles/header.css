@@ -206,7 +206,6 @@
     width: min(380px, 92%);
     height: 100vh;
     background: linear-gradient(180deg, #101820 0%, #141f19 100%);
-    box-shadow: -18px 0 40px rgba(0, 0, 0, 0.28);
     transform: translateX(100%);
     transition: 0.35s ease;
     z-index: 1200;

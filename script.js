@@ -536,7 +536,7 @@ const equipmentData = [
         imagens: [
             "./assets/images/barra-ancoragem-1.png",
             "./assets/images/barra-ancoragem-2.png",
-            "./assets/images/barra-ancoragem-3.png"
+            "./assets/images/barra-ancoragem-3.jpg"
         ],
         fichaTecnica: {
             Material: "Aço",
