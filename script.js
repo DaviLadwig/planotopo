@@ -233,7 +233,7 @@ const equipmentData = [
         categoria: "Estrutura",
         descricao: "Escora metálica regulável de 2 a 4,5 metros para escoramento em grandes alturas.",
         imagens: [
-            "./assets/images/escora-45-1.JFIF",
+            "./assets/images/escora-45-1.png",
             "./assets/images/escora-45-2.jpg"
         ],
         fichaTecnica: {
