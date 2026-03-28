@@ -129,9 +129,9 @@ const equipmentData = [
         categoria: "Betoneiras",
         descricao: "Betoneira Menegotti de 400 litros ideal para preparo de concreto e argamassa em obras de pequeno e médio porte.",
         imagens: [
-            "./assets/images/betoneira-400-1.jpg",
-            "./assets/images/betoneira-400-2.jpg",
-            "./assets/images/betoneira-400-3.jpg"
+            "./assets/images/betoneira-400-1.png",
+            "./assets/images/betoneira-400-2.png",
+            "./assets/images/betoneira-400-3.png"
         ],
         fichaTecnica: {
             Marca: "Menegotti",
@@ -149,8 +149,8 @@ const equipmentData = [
         descricao: "Betoneira Menegotti de 600 litros para maior produtividade em obras de médio e grande porte.",
         imagens: [
             "./assets/images/betoneira-600-1.jpg",
-            "./assets/images/betoneira-600-2.jpg",
-            "./assets/images/betoneira-600-3.jpg"
+            "./assets/images/betoneira-600-2.png",
+            "./assets/images/betoneira-600-3.png"
         ],
         fichaTecnica: {
             Marca: "Menegotti",
@@ -167,9 +167,8 @@ const equipmentData = [
         categoria: "Elevação",
         descricao: "Mini grua para movimentação vertical de materiais em obras, trazendo mais agilidade e segurança.",
         imagens: [
-            "./assets/images/mini-grua-1.jpg",
-            "./assets/images/mini-grua-2.jpg",
-            "./assets/images/mini-grua-3.jpg"
+            "./assets/images/minigrua-1.jpg",
+            "./assets/images/minigrua-2.jpg"
         ],
         fichaTecnica: {
             Aplicação: "Elevação de materiais",
@@ -185,9 +184,7 @@ const equipmentData = [
         categoria: "Segurança",
         descricao: "Sistema de guarda corpo para proteção em áreas elevadas e bordas de lajes.",
         imagens: [
-            "./assets/images/guarda-corpo-1.jpg",
-            "./assets/images/guarda-corpo-2.jpg",
-            "./assets/images/guarda-corpo-3.jpg"
+            "./assets/images/guardacorpo-1.png"
         ],
         fichaTecnica: {
             Material: "Aço galvanizado",
@@ -205,8 +202,7 @@ const equipmentData = [
         descricao: "Piso metálico para andaimes e estruturas temporárias, oferecendo segurança e estabilidade.",
         imagens: [
             "./assets/images/piso-metalico-1.jpg",
-            "./assets/images/piso-metalico-2.jpg",
-            "./assets/images/piso-metalico-3.jpg"
+            "./assets/images/piso-metalico-2.jpg"
         ],
         fichaTecnica: {
             Material: "Aço",
@@ -221,9 +217,8 @@ const equipmentData = [
         categoria: "Estrutura",
         descricao: "Escora metálica regulável de 2 a 3,5 metros para sustentação de lajes e formas.",
         imagens: [
-            "./assets/images/escora-35-1.jpg",
-            "./assets/images/escora-35-2.jpg",
-            "./assets/images/escora-35-3.jpg"
+            "./assets/images/escora-35-1.png",
+            "./assets/images/escora-35-2.png"
         ],
         fichaTecnica: {
             Altura: "2,0 a 3,5 metros",
@@ -238,9 +233,8 @@ const equipmentData = [
         categoria: "Estrutura",
         descricao: "Escora metálica regulável de 2 a 4,5 metros para escoramento em grandes alturas.",
         imagens: [
-            "./assets/images/escora-45-1.jpg",
-            "./assets/images/escora-45-2.jpg",
-            "./assets/images/escora-45-3.jpg"
+            "./assets/images/escora-45-1.JFIF",
+            "./assets/images/escora-45-2.jpg"
         ],
         fichaTecnica: {
             Altura: "2,0 a 4,5 metros",
@@ -272,9 +266,9 @@ const equipmentData = [
         categoria: "Energia",
         descricao: "Gerador de 6 kVA indicado para canteiros de obra e equipamentos de maior consumo.",
         imagens: [
-            "./assets/images/gerador-6-1.jpg",
-            "./assets/images/gerador-6-2.jpg",
-            "./assets/images/gerador-6-3.jpg"
+            "./assets/images/gerador-6-1.png",
+            "./assets/images/gerador-6-2.png",
+            "./assets/images/gerador-6-3.png"
         ],
         fichaTecnica: {
             Potência: "6 kVA",
@@ -306,9 +300,9 @@ const equipmentData = [
         categoria: "Compactação",
         descricao: "Compactador de percussão marca Buffalo para compactação de solo em áreas menores.",
         imagens: [
-            "./assets/images/compactador-percussao-1.jpg",
-            "./assets/images/compactador-percussao-2.jpg",
-            "./assets/images/compactador-percussao-3.jpg"
+            "./assets/images/compactador-percussao-1.png",
+            "./assets/images/compactador-percussao-2.png",
+            "./assets/images/compactador-percussao-3.png"
         ],
         fichaTecnica: {
             Marca: "Buffalo",
@@ -323,9 +317,9 @@ const equipmentData = [
         categoria: "Compactação",
         descricao: "Compactador de placa para compactação de pisos, brita e solo em áreas planas.",
         imagens: [
-            "./assets/images/compactador-placa-1.jpg",
-            "./assets/images/compactador-placa-2.jpg",
-            "./assets/images/compactador-placa-3.jpg"
+            "./assets/images/compactador-placa-1.png",
+            "./assets/images/compactador-placa-2.png",
+            "./assets/images/compactador-placa-3.png"
         ],
         fichaTecnica: {
             Aplicação: "Solo e pavimentação",
@@ -340,9 +334,9 @@ const equipmentData = [
         categoria: "Corte",
         descricao: "Cortador de piso tipo Serra Clip para cortes precisos em concreto e asfalto.",
         imagens: [
-            "./assets/images/cortador-piso-1.jpg",
-            "./assets/images/cortador-piso-2.jpg",
-            "./assets/images/cortador-piso-3.jpg"
+            "./assets/images/cortador-piso-1.png",
+            "./assets/images/cortador-piso-2.png",
+            "./assets/images/cortador-piso-3.png"
         ],
         fichaTecnica: {
             Aplicação: "Corte de concreto e asfalto",
@@ -357,9 +351,9 @@ const equipmentData = [
         categoria: "Elevação",
         descricao: "Talha para elevação de cargas de até 1 tonelada.",
         imagens: [
-            "./assets/images/talha-1t-1.jpg",
-            "./assets/images/talha-1t-2.jpg",
-            "./assets/images/talha-1t-3.jpg"
+            "./assets/images/talha-1t-1.png",
+            "./assets/images/talha-1t-2.png",
+            "./assets/images/talha-1t-3.png"
         ],
         fichaTecnica: {
             Capacidade: "1 tonelada",
@@ -373,9 +367,7 @@ const equipmentData = [
         categoria: "Elevação",
         descricao: "Talha reforçada para movimentação de cargas de até 3 toneladas.",
         imagens: [
-            "./assets/images/talha-3t-1.jpg",
-            "./assets/images/talha-3t-2.jpg",
-            "./assets/images/talha-3t-3.jpg"
+            "./assets/images/talha-3t-1.jpg"
         ],
         fichaTecnica: {
             Capacidade: "3 toneladas",
@@ -389,9 +381,7 @@ const equipmentData = [
         categoria: "Elevação",
         descricao: "Balancinho suspenso para trabalhos em fachadas e manutenção predial.",
         imagens: [
-            "./assets/images/balancinho-1.jpg",
-            "./assets/images/balancinho-2.jpg",
-            "./assets/images/balancinho-3.jpg"
+            "./assets/images/balancinho-1.png"
         ],
         fichaTecnica: {
             Aplicação: "Trabalhos em altura",
@@ -405,9 +395,8 @@ const equipmentData = [
         categoria: "Elevação",
         descricao: "Cadeira suspensa para trabalhos de acabamento e manutenção em altura.",
         imagens: [
-            "./assets/images/cadeira-1.jpg",
-            "./assets/images/cadeira-2.jpg",
-            "./assets/images/cadeira-3.jpg"
+            "./assets/images/cadeira-1.png",
+            "./assets/images/cadeira-2.png"
         ],
         fichaTecnica: {
             Aplicação: "Pintura e manutenção",
@@ -421,9 +410,8 @@ const equipmentData = [
         categoria: "Acabamento",
         descricao: "Alisadora de piso para acabamento e nivelamento de concreto fresco.",
         imagens: [
-            "./assets/images/alisadora-1.jpg",
-            "./assets/images/alisadora-2.jpg",
-            "./assets/images/alisadora-3.jpg"
+            "./assets/images/alisadora-1.png",
+            "./assets/images/alisadora-2.png"
         ],
         fichaTecnica: {
             Aplicação: "Acabamento de concreto",
@@ -437,9 +425,8 @@ const equipmentData = [
         categoria: "Acabamento",
         descricao: "Politriz para polimento e acabamento de superfícies.",
         imagens: [
-            "./assets/images/politriz-1.jpg",
-            "./assets/images/politriz-2.jpg",
-            "./assets/images/politriz-3.jpg"
+            "./assets/images/politriz-1.png",
+            "./assets/images/politriz-2.png"
         ],
         fichaTecnica: {
             Aplicação: "Polimento",
@@ -453,9 +440,8 @@ const equipmentData = [
         categoria: "Concreto",
         descricao: "Motor acionador utilizado em mangotes vibradores para concretagem.",
         imagens: [
-            "./assets/images/motor-acionador-1.jpg",
-            "./assets/images/motor-acionador-2.jpg",
-            "./assets/images/motor-acionador-3.jpg"
+            "./assets/images/motor-acionador-1.png",
+            "./assets/images/motor-acionador-2.png"
         ],
         fichaTecnica: {
             Aplicação: "Mangote vibrador",
@@ -469,9 +455,9 @@ const equipmentData = [
         categoria: "Hidráulico",
         descricao: "Motobomba para sucção e remoção de água em obras e terrenos.",
         imagens: [
-            "./assets/images/motobomba-1.jpg",
-            "./assets/images/motobomba-2.jpg",
-            "./assets/images/motobomba-3.jpg"
+            "./assets/images/motobomba-1.png",
+            "./assets/images/motobomba-2.png",
+            "./assets/images/motobomba-3.png"
         ],
         fichaTecnica: {
             Aplicação: "Remoção de água",
@@ -485,9 +471,9 @@ const equipmentData = [
         categoria: "Demolição",
         descricao: "Martelete leve de 2,5kg ideal para pequenos reparos e demolições leves.",
         imagens: [
-            "./assets/images/martelete-25-1.jpg",
-            "./assets/images/martelete-25-2.jpg",
-            "./assets/images/martelete-25-3.jpg"
+            "./assets/images/martelete-25-1.png",
+            "./assets/images/martelete-25-2.png",
+            "./assets/images/martelete-25-3.png"
         ],
         fichaTecnica: {
             Peso: "2,5 kg",
@@ -497,45 +483,13 @@ const equipmentData = [
     },
     {
         id: 123,
-        nome: "Martelete 7kg",
-        categoria: "Demolição",
-        descricao: "Martelete de 7kg para perfuração e demolição em concreto e alvenaria.",
-        imagens: [
-            "./assets/images/martelete-7-1.jpg",
-            "./assets/images/martelete-7-2.jpg",
-            "./assets/images/martelete-7-3.jpg"
-        ],
-        fichaTecnica: {
-            Peso: "7 kg",
-            Uso: "Demolição e perfuração",
-            Alimentação: "Elétrica"
-        }
-    },
-    {
-        id: 124,
-        nome: "Martelete 8kg",
-        categoria: "Demolição",
-        descricao: "Martelete de 8kg para serviços intensos em concreto.",
-        imagens: [
-            "./assets/images/martelete-8-1.jpg",
-            "./assets/images/martelete-8-2.jpg",
-            "./assets/images/martelete-8-3.jpg"
-        ],
-        fichaTecnica: {
-            Peso: "8 kg",
-            Uso: "Concreto e alvenaria",
-            Alimentação: "Elétrica"
-        }
-    },
-    {
-        id: 125,
         nome: "Martelete 11kg",
         categoria: "Demolição",
         descricao: "Martelete de 11kg para demolições pesadas e abertura de canaletas.",
         imagens: [
-            "./assets/images/martelete-11-1.jpg",
-            "./assets/images/martelete-11-2.jpg",
-            "./assets/images/martelete-11-3.jpg"
+            "./assets/images/martelete-11-1.png",
+            "./assets/images/martelete-11-2.png",
+            "./assets/images/martelete-11-3.png"
         ],
         fichaTecnica: {
             Peso: "11 kg",
@@ -544,14 +498,14 @@ const equipmentData = [
         }
     },
     {
-        id: 126,
+        id: 124,
         nome: "Martelete 15kg",
         categoria: "Demolição",
         descricao: "Martelete de 15kg para rompimento de concreto e pisos.",
         imagens: [
-            "./assets/images/martelete-15-1.jpg",
-            "./assets/images/martelete-15-2.jpg",
-            "./assets/images/martelete-15-3.jpg"
+            "./assets/images/martelete-15-1.png",
+            "./assets/images/martelete-15-2.png",
+            "./assets/images/martelete-15-3.png"
         ],
         fichaTecnica: {
             Peso: "15 kg",
@@ -560,14 +514,13 @@ const equipmentData = [
         }
     },
     {
-        id: 127,
+        id: 125,
         nome: "Martelete 30kg",
         categoria: "Demolição",
         descricao: "Martelete de 30kg para demolições pesadas e alto desempenho.",
         imagens: [
-            "./assets/images/martelete-30-1.jpg",
-            "./assets/images/martelete-30-2.jpg",
-            "./assets/images/martelete-30-3.jpg"
+            "./assets/images/martelete-30-1.png",
+            "./assets/images/martelete-30-2.png",
         ],
         fichaTecnica: {
             Peso: "30 kg",
@@ -576,30 +529,14 @@ const equipmentData = [
         }
     },
     {
-        id: 128,
-        nome: "Alisador de Concreto",
-        categoria: "Acabamento",
-        descricao: "Equipamento para nivelamento e acabamento final do concreto.",
-        imagens: [
-            "./assets/images/alisador-concreto-1.jpg",
-            "./assets/images/alisador-concreto-2.jpg",
-            "./assets/images/alisador-concreto-3.jpg"
-        ],
-        fichaTecnica: {
-            Aplicação: "Acabamento de concreto",
-            Uso: "Lajes e pisos",
-            Combustível: "Gasolina"
-        }
-    },
-    {
-        id: 129,
+        id: 126,
         nome: "Barra de Ancoragem",
         categoria: "Segurança",
         descricao: "Barra de ancoragem para sistemas de proteção e trabalho em altura.",
         imagens: [
-            "./assets/images/barra-ancoragem-1.jpg",
-            "./assets/images/barra-ancoragem-2.jpg",
-            "./assets/images/barra-ancoragem-3.jpg"
+            "./assets/images/barra-ancoragem-1.png",
+            "./assets/images/barra-ancoragem-2.png",
+            "./assets/images/barra-ancoragem-3.png"
         ],
         fichaTecnica: {
             Material: "Aço",
@@ -607,23 +544,6 @@ const equipmentData = [
             Compatibilidade: "Cintos e trava-quedas"
         }
     },
-    {
-        id: 130,
-        nome: "Bomba Submersa",
-        categoria: "Hidráulico",
-        descricao: "Bomba submersa para drenagem e remoção de água em poços, valas e obras.",
-        imagens: [
-            "./assets/images/bomba-submersa-1.jpg",
-            "./assets/images/bomba-submersa-2.jpg",
-            "./assets/images/bomba-submersa-3.jpg"
-        ],
-        fichaTecnica: {
-            Aplicação: "Drenagem",
-            Alimentação: "Elétrica",
-            Uso: "Poços, valas e reservatórios"
-        }
-    }
-
 
 ];
 
@@ -809,7 +729,7 @@ function finishOrderOnWhatsapp() {
         alert("Adicione pelo menos um equipamento ao pedido.");
         return;
     }
-//NUMERO WHATS---------------------------------------------------------------------------------------------------------------
+    //NUMERO WHATS---------------------------------------------------------------------------------------------------------------
     const phone = "5598991713898"; // troque pelo número real
     const message = generateWhatsappMessage();
     const url = `https://wa.me/${phone}?text=${message}`;
