@@ -50,75 +50,73 @@ document.addEventListener("keydown", (event) => {
         closeMobileMenu();
     }
 });
+
+//================================================================================================================================
+//FUNCIONAMENTO DO FAQ PARA ABIR E FECHAR DUVIDA
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        faqItems.forEach((faq) => faq.classList.remove("active"));
+
+        if (!isActive) {
+            item.classList.add("active");
+        }
+    });
+});
+
 //================================================================================================================================
 //HERO SECTION CARROSSEL
 
-const slides = document.querySelectorAll(".hero-slide");
-const dots = document.querySelectorAll(".hero-dot");
-const prevBtn = document.getElementById("prevSlide");
-const nextBtn = document.getElementById("nextSlide");
+const heroCommercialTrack = document.getElementById("heroCommercialTrack");
+const heroCommercialDots = document.querySelectorAll(".hero-commercial-dot");
+const heroCommercialSlides = document.querySelectorAll(".hero-commercial-slide");
 
-let currentSlide = 0;
-let autoSlide;
+let currentHeroCommercial = 0;
+let heroCommercialInterval;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
+function updateHeroCommercialSlider() {
+    if (!heroCommercialTrack) return;
+
+    heroCommercialTrack.style.transform = `translateX(-${currentHeroCommercial * 100}%)`;
+
+    heroCommercialDots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentHeroCommercial);
     });
-
-    dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-    });
-
-    currentSlide = index;
 }
 
-function nextSlide() {
-    const next = (currentSlide + 1) % slides.length;
-    showSlide(next);
+function nextHeroCommercialSlide() {
+    currentHeroCommercial = (currentHeroCommercial + 1) % heroCommercialSlides.length;
+    updateHeroCommercialSlider();
 }
 
-function prevSlide() {
-    const prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
-}
-
-function startAutoSlide() {
-    autoSlide = setInterval(() => {
-        nextSlide();
+function startHeroCommercialAutoplay() {
+    heroCommercialInterval = setInterval(() => {
+        nextHeroCommercialSlide();
     }, 5000);
 }
 
-function resetAutoSlide() {
-    clearInterval(autoSlide);
-    startAutoSlide();
+function resetHeroCommercialAutoplay() {
+    clearInterval(heroCommercialInterval);
+    startHeroCommercialAutoplay();
 }
 
-if (slides.length > 0) {
-    showSlide(currentSlide);
-    startAutoSlide();
-}
-
-if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-        nextSlide();
-        resetAutoSlide();
-    });
-}
-
-if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-        prevSlide();
-        resetAutoSlide();
-    });
-}
-
-dots.forEach((dot, index) => {
+heroCommercialDots.forEach((dot) => {
     dot.addEventListener("click", () => {
-        showSlide(index);
-        resetAutoSlide();
+        currentHeroCommercial = Number(dot.dataset.slide);
+        updateHeroCommercialSlider();
+        resetHeroCommercialAutoplay();
     });
 });
+
+if (heroCommercialSlides.length > 0) {
+    updateHeroCommercialSlider();
+    startHeroCommercialAutoplay();
+}
 
 //==================================================================================================================================
 //MARKETPLACE JS
@@ -544,7 +542,7 @@ const equipmentData = [
             Compatibilidade: "Cintos e trava-quedas"
         }
     },
-        {
+    {
         id: 127,
         nome: "Container Almoxerifado",
         categoria: "Containers",

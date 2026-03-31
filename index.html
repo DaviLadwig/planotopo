@@ -23,8 +23,9 @@
             </a>
 
             <nav class="desktop-nav">
-                <a href="#equipamentos">Equipamentos</a>
-                <a href="#manutencao">Manutenções</a>
+                <a href="#inicio">Início</a>
+                <a href="catalogo.html">Equipamentos</a>
+                <a href="#manutencoes">Manutenções</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -57,10 +58,64 @@
         </div>
 
         <nav class="mobile-nav">
-            <a href="#equipamentos">Equipamentos</a>
-            <a href="#manutencao">Manutenções</a>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Equipamentos</a>
+            <a href="#manutencoes">Manutenções</a>
             <a href="#contato">Contato</a>
         </nav>
+
+        <div class="mobile-menu-contact">
+            <div class="mobile-menu-socials">
+                <a href="#" class="mobile-social-btn" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path
+                            d="M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path
+                            d="M16 11.37C16.1234 12.2022 15.9812 13.0521 15.5937 13.799C15.2062 14.5459 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2385 16.0396 11.4079 15.9059C10.5773 15.7721 9.80971 15.3797 9.21479 14.7848C8.61987 14.1899 8.22749 13.4223 8.09374 12.5917C7.95999 11.7611 8.09167 10.9095 8.46995 10.158C8.84823 9.40648 9.4537 8.79335 10.2006 8.40585C10.9475 8.01835 11.7974 7.87613 12.6296 7.99955C13.4789 8.12547 14.2659 8.52102 14.8728 9.12789C15.4796 9.73477 15.8752 10.5218 16.0011 11.3711L16 11.37Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </a>
+
+                <a href="#" class="mobile-social-btn" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path
+                            d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+
+                <a href="#" class="mobile-social-btn" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path
+                            d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
+                            fill="currentColor" />
+                        <path d="M6 9H2V21H6V9Z" fill="currentColor" />
+                        <path
+                            d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+
+
+            <div class="mobile-contact-info">
+                <div class="mobile-contact-city">
+                    <span class="mobile-contact-icon">📍</span>
+                    <strong>SÃO LUÍS - MA</strong>
+                </div>
+
+                <p>
+                    R. Cel. Belchior, 9 - Qd. 25, Lote 3,5,7<br>
+                    Ponta D'areia<br>
+                    São Luís - MA <br>
+                    CEP: 5077-653
+                </p>
+
+            </div>
+        </div>
+
 
         <div class="mobile-menu-footer">
             <a href="https://wa.me/5598991713898" class="mobile-whatsapp-btn">Falar no WhatsApp</a>
@@ -70,251 +125,272 @@
     </div>
 
     <!--HERO SECTION COM CARROSSEL-->
-    <section class="hero">
-        <div class="hero-slider" id="heroSlider">
-            <div class="hero-slide active">
-                <img src="assets/icon/fundo-3.png" alt="Locação de equipamentos para construção" />
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <span class="hero-badge">Locação com agilidade</span>
-                    <h1>Equipamentos para obras com estrutura profissional</h1>
+    <section class="hero-commercial">
+        <div class="container">
+            <div class="hero-commercial-slider" id="heroCommercialSlider">
+                <div class="hero-commercial-track" id="heroCommercialTrack">
+                    <article class="hero-commercial-slide">
+                        <a href="./catalogo.html">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="./assets/images/bannermob-1.png">
+                                <source media="(max-width: 1024px)" srcset="./assets/images/bannertab-1.png">
+                                <img src="./assets/images/bannerdesk-1.png" alt="Banner catálogo">
+                            </picture>
+                        </a>
+                    </article>
+
+                    <article class="hero-commercial-slide">
+                        <a href="./catalogo.html">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="./assets/images/bannermob-2.png">
+                                <source media="(max-width: 1024px)" srcset="./assets/images/bannertab-2.png">
+                                <img src="./assets/images/bannerdesk-2.png" alt="Banner locação">
+                            </picture>
+                        </a>
+                    </article>
+
+                    <article class="hero-commercial-slide">
+                        <a href="#manutencoes">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="./assets/images/bannermob-3.png">
+                                <source media="(max-width: 1024px)" srcset="./assets/images/bannertab-3.jpg">
+                                <img src="./assets/images/bannerdesk-3.png" alt="Banner manutenção">
+                            </picture>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="hero-commercial-dots" id="heroCommercialDots">
+                    <button class="hero-commercial-dot active" data-slide="0" aria-label="Ir para slide 1"></button>
+                    <button class="hero-commercial-dot" data-slide="1" aria-label="Ir para slide 2"></button>
+                    <button class="hero-commercial-dot" data-slide="2" aria-label="Ir para slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION SOBRE A PLANOTOPO-->
+    <section class="about-company" id="sobre">
+        <div class="container">
+            <div class="about-company-grid">
+                <div class="about-company-content">
+                    <span class="section-tag">Sobre a empresa</span>
+
+                    <h2>Referência em locação e manutenção de equipamentos para obras</h2>
+
                     <p>
-                        Betoneiras, compactadores, marteletes, geradores e muito mais
-                        para sua obra avançar com segurança e rapidez.
+                        A Plano Topo Equipamentos atua com foco em locação, manutenção e suporte
+                        para obras de diferentes portes, entregando agilidade, confiança e
+                        equipamentos prontos para uso.
                     </p>
-                    <div class="hero-actions">
-                        <a href="#equipamentos" class="btn btn-primary">Ver equipamentos</a>
-                        <a href="#contato" class="btn btn-secondary">Solicitar orçamento</a>
+
+                    <p>
+                        Ao longo da nossa trajetória, construímos uma relação sólida com clientes
+                        que buscam atendimento rápido, variedade de equipamentos e segurança na
+                        operação.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="about-highlight-card">
+                            <strong>16 anos</strong>
+                            <span>de história no mercado</span>
+                        </div>
+
+                        <div class="about-highlight-card">
+                            <strong>Construção civil</strong>
+                            <span>como segmento principal</span>
+                        </div>
+
+                        <div class="about-highlight-card">
+                            <strong>Clientes satisfeitos</strong>
+                            <span>relacionamento com confiança</span>
+                        </div>
+
+                        <div class="about-highlight-card">
+                            <strong>Locação e manutenção</strong>
+                            <span>soluções completas para obras</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-company-media">
+                    <div class="about-company-image">
+                        <img src="./assets/images/sobre-img.png" alt="Plano Topo Equipamentos">
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="hero-slide">
-                <img src="assets/icon/fundo-2.png" alt="Equipamentos revisados e prontos para uso" />
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <span class="hero-badge">Equipamentos revisados</span>
-                    <h1>Prontos para uso imediato no seu canteiro de obras</h1>
+
+    <!--COMO FUNCIONA PARA ALUGAR NO SISTEMA-->
+    <section class="how-section" id="como-funciona">
+        <div class="container">
+            <div class="how-grid">
+                <div class="how-content">
+                    <span class="section-tag">Como funciona</span>
+                    <h2>Solicite seu orçamento de forma simples e rápida</h2>
                     <p>
-                        Locação rápida, atendimento eficiente e equipamentos confiáveis
-                        para diferentes etapas da construção.
+                        Nosso processo foi pensado para facilitar sua rotina. Você encontra o
+                        equipamento, envia o pedido e recebe atendimento direto no WhatsApp.
                     </p>
-                    <div class="hero-actions">
-                        <a href="#equipamentos" class="btn btn-primary">Explorar catálogo</a>
-                        <a href="#https://wa.me/5598991713898" class="btn btn-secondary">Falar no WhatsApp</a>
+
+                    <a href="./catalogo.html" class="how-main-btn">Ir para o catálogo</a>
+                </div>
+
+                <div class="how-steps">
+                    <article class="how-step">
+                        <div class="how-step-number">01</div>
+                        <div class="how-step-text">
+                            <h3>Escolha os equipamentos</h3>
+                            <p>Navegue pelo catálogo e encontre a opção ideal para sua obra.</p>
+                        </div>
+                    </article>
+
+                    <article class="how-step">
+                        <div class="how-step-number">02</div>
+                        <div class="how-step-text">
+                            <h3>Monte o seu pedido</h3>
+                            <p>Adicione os itens e quantidades desejadas no carrinho.</p>
+                        </div>
+                    </article>
+
+                    <article class="how-step">
+                        <div class="how-step-number">03</div>
+                        <div class="how-step-text">
+                            <h3>Finalize no WhatsApp</h3>
+                            <p>Receba atendimento rápido e um orçamento personalizado.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVIEW DO CATALOGO (ALGUNS PRODUTOS AMOSTRA)-->
+    <section class="catalog-preview">
+        <div class="container">
+            <div class="catalog-preview-header">
+                <div>
+                    <span class="section-tag">Catálogo</span>
+                    <h2>Alguns equipamentos disponíveis para sua obra</h2>
+                    <p>
+                        Veja uma prévia do nosso catálogo e acesse a página completa para
+                        conhecer todas as opções disponíveis.
+                    </p>
+                </div>
+
+                <a href="./catalogo.html" class="catalog-preview-btn">Ver catálogo completo ➔</a>
+            </div>
+
+            <div class="catalog-preview-grid">
+                <article class="catalog-preview-card">
+                    <div class="catalog-preview-image">
+                        <img src="./assets/images/betoneira-400-1.png" alt="Betoneira 400L">
+                    </div>
+                    <div class="catalog-preview-body">
+                        <span>Betoneiras</span>
+                        <h3>Betoneira 400L</h3>
+                    </div>
+                </article>
+
+                <article class="catalog-preview-card">
+                    <div class="catalog-preview-image">
+                        <img src="./assets/images/martelete-11-1.png" alt="Martelete 11kg">
+                    </div>
+                    <div class="catalog-preview-body">
+                        <span>Demolição</span>
+                        <h3>Martelete 11kg</h3>
+                    </div>
+                </article>
+
+                <article class="catalog-preview-card">
+                    <div class="catalog-preview-image">
+                        <img src="./assets/images/gerador-8-1.jpg" alt="Gerador 8 kVA">
+                    </div>
+                    <div class="catalog-preview-body">
+                        <span>Energia</span>
+                        <h3>Gerador 8 kVA</h3>
+                    </div>
+                </article>
+
+                <article class="catalog-preview-card">
+                    <div class="catalog-preview-image">
+                        <img src="./assets/images/container-1.png" alt="Container">
+                    </div>
+                    <div class="catalog-preview-body">
+                        <span>Estrutura</span>
+                        <h3>Container</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!--SERVIÇOS AUTORIZADOS-->
+    <section class="authorized-premium-section" id="manutencoes">
+        <div class="container">
+            <div class="authorized-premium-box">
+                <div class="authorized-premium-header">
+                    <span class="authorized-badge">Assistência autorizada</span>
+                    <h2>Manutenção especializada com marcas reconhecidas no mercado</h2>
+                    <p>
+                        Trabalhamos com serviços técnicos e parceiros autorizados para garantir
+                        mais segurança, desempenho e durabilidade aos equipamentos utilizados na sua obra.
+                    </p>
+                </div>
+
+                <div class="authorized-benefits">
+                    <div class="authorized-benefit-item">
+                        <strong>Manutenção especializada</strong>
+                        <span>Serviços com mais confiança e qualidade técnica.</span>
+                    </div>
+
+                    <div class="authorized-benefit-item">
+                        <strong>Marcas autorizadas</strong>
+                        <span>Atendimento com fabricantes reconhecidos no mercado.</span>
+                    </div>
+
+                    <div class="authorized-benefit-item">
+                        <strong>Mais segurança</strong>
+                        <span>Equipamentos revisados e prontos para uso com maior confiabilidade.</span>
                     </div>
                 </div>
-            </div>
 
-            <div class="hero-slide">
-                <img src="assets/icon/fundo-1.png" alt="Catálogo de equipamentos para locação" />
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <span class="hero-badge">Catálogo completo</span>
-                    <h1>Encontre o equipamento certo para cada necessidade</h1>
-                    <p>
-                        Navegue por categorias, monte seu pedido e envie tudo pronto
-                        para o responsável pelo WhatsApp.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#categorias" class="btn btn-primary">Ver categorias</a>
-                        <a href="#pedido" class="btn btn-secondary">Montar pedido</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MARKETPLACE SECTION -->
-    <section class="marketplace" id="equipamentos">
-        <div class="container">
-            <div class="marketplace-header">
-                <span class="section-badge">Catálogo</span>
-                <h2>Encontre o equipamento certo para sua obra</h2>
-                <p>
-                    Navegue por categorias, veja os detalhes do equipamento e monte seu pedido.
-                </p>
-            </div>
-
-            <div class="categories-wrapper">
-                <div class="categories" id="categories"></div>
-            </div>
-
-            <div class="products" id="products"></div>
-        </div>
-    </section>
-
-    <div class="product-modal" id="productModal">
-        <div class="product-modal-overlay" id="productModalOverlay"></div>
-
-        <div class="product-modal-content">
-            <button class="product-modal-close" id="closeModalBtn" aria-label="Fechar modal">
-                &times;
-            </button>
-
-            <div class="product-modal-gallery">
-                <button class="gallery-arrow left" id="prevImageBtn">&#10094;</button>
-
-                <div class="gallery-main">
-                    <img id="modalMainImage" src="" alt="">
-                </div>
-
-                <button class="gallery-arrow right" id="nextImageBtn">&#10095;</button>
-            </div>
-
-            <div class="gallery-thumbs" id="galleryThumbs"></div>
-
-            <div class="product-modal-info">
-                <span class="product-category" id="modalCategory"></span>
-                <h3 id="modalTitle"></h3>
-                <p id="modalDescription"></p>
-
-                <div class="product-specs">
-                    <h4>Ficha técnica</h4>
-                    <div class="product-specs-list" id="modalSpecs"></div>
-                </div>
-
-                <button class="btn-add-order" id="addToOrderBtn">
-                    Adicionar ao pedido
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-    <!--cta final-->
-    <section class="process-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-tag">Como funciona</span>
-                <h2>Solicite seu orçamento em poucos passos</h2>
-                <p>
-                    Um processo simples, rápido e direto para você encontrar o equipamento,
-                    montar o pedido e falar com nossa equipe no WhatsApp.
-                </p>
-            </div>
-
-            <div class="process-grid">
-                <article class="process-card">
-                    <div class="process-icon-box">✔</div>
-                    <div class="process-line"></div>
-                    <h3>Escolha o equipamento</h3>
-                    <p>Navegue pelo catálogo e encontre a opção ideal para sua obra.</p>
-                </article>
-
-                <article class="process-card">
-                    <div class="process-icon-box">🛒</div>
-                    <div class="process-line"></div>
-                    <h3>Monte seu pedido</h3>
-                    <p>Adicione os itens desejados e ajuste as quantidades no carrinho.</p>
-                </article>
-
-                <article class="process-card">
-                    <div class="process-icon-box">💬</div>
-                    <h3>Receba no WhatsApp</h3>
-                    <p>Envie o pedido e receba atendimento rápido com orçamento personalizado.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-tag">Diferenciais</span>
-                <h2>Por que escolher a Plano Topo?</h2>
-                <p>
-                    Trabalhamos com foco em agilidade, segurança operacional e equipamentos
-                    revisados para atender obras com eficiência.
-                </p>
-            </div>
-
-            <div class="why-grid">
-                <article class="why-card">
-                    <div class="why-icon">🛠</div>
-                    <h3>Equipamentos revisados</h3>
-                    <p>Todos os equipamentos passam por manutenção e inspeção antes da locação.</p>
-                </article>
-
-                <article class="why-card">
-                    <div class="why-icon">⚡</div>
-                    <h3>Atendimento rápido</h3>
-                    <p>Retorno ágil pelo WhatsApp para acelerar sua tomada de decisão.</p>
-                </article>
-
-                <article class="why-card">
-                    <div class="why-icon">🛡</div>
-                    <h3>Suporte confiável</h3>
-                    <p>Equipe preparada para orientar você em cada etapa da locação.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-banner-box">
-                <div class="cta-banner-content">
-                    <span class="section-tag light">Solicite seu orçamento</span>
-                    <h2>Pronto para agilizar sua obra com os equipamentos certos?</h2>
-                    <p>
-                        Monte seu pedido agora e fale com nossa equipe para receber um orçamento
-                        rápido e personalizado.
-                    </p>
-                </div>
-
-                <div class="cta-banner-actions">
-                    <a href="#" class="cta-main-button">Falar no WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="authorized-section">
-        <div class="container">
-            <div class="authorized-box">
-                <div class="authorized-header">
-                    <span class="section-tag light">Serviços autorizados</span>
-                    <h2>Assistência técnica e manutenção com marcas autorizadas</h2>
-                    <p>
-                        Trabalhamos com serviços especializados e parceiros autorizados para
-                        garantir mais confiança, durabilidade e segurança nos equipamentos.
-                    </p>
-                </div>
-
-                <div class="authorized-slider" id="manutencao">
-                    <div class="authorized-track">
-                        <div class="authorized-card">
-                            <img src="./assets/icon/makita-logo.webp" alt="Makita">
-                        </div>
-
-                        <div class="authorized-card">
-                            <img src="./assets/icon/buffalo-logo.jfif" alt="Buffalo">
-                        </div>
-
-                        <div class="authorized-card">
-                            <img src="./assets/icon/Menegotti-logo.png" alt="Menegotti">
-                        </div>
-
-                        <div class="authorized-card">
+                <div class="authorized-premium-slider">
+                    <div class="authorized-premium-track">
+                        <div class="authorized-logo-card bosch">
                             <img src="./assets/icon/bosch-logo.png" alt="Bosch">
                         </div>
 
-                        <!-- DUPLICAÇÃO PARA LOOP INFINITO -->
-                        <div class="authorized-card">
-                            <img src="./assets/icon/makita-logo.webp" alt="Makita">
+                        <div class="authorized-logo-card makita">
+                            <img src="./assets/icon/makita-logo.png" alt="Makita">
                         </div>
 
-                        <div class="authorized-card">
-                            <img src="./assets/icon/buffalo-logo.jfif" alt="Buffalo">
+                        <div class="authorized-logo-card buffalo">
+                            <img src="./assets/icon/buffalo-logo.png" alt="Buffalo">
                         </div>
 
-                        <div class="authorized-card">
+                        <div class="authorized-logo-card menegotti">
                             <img src="./assets/icon/Menegotti-logo.png" alt="Menegotti">
                         </div>
 
-                        <div class="authorized-card">
+                        <!-- repetição para loop infinito -->
+                        <div class="authorized-logo-card bosch">
                             <img src="./assets/icon/bosch-logo.png" alt="Bosch">
+                        </div>
+
+                        <div class="authorized-logo-card makita">
+                            <img src="./assets/icon/makita-logo.png" alt="Makita">
+                        </div>
+
+                        <div class="authorized-logo-card buffalo">
+                            <img src="./assets/icon/buffalo-logo.png" alt="Buffalo">
+                        </div>
+
+                        <div class="authorized-logo-card menegotti">
+                            <img src="./assets/icon/Menegotti-logo.png" alt="Menegotti">
                         </div>
                     </div>
                 </div>
@@ -322,6 +398,174 @@
         </div>
     </section>
 
+
+    <!--ESCOLHA A PLANOTOPO-->
+    <section class="why-premium-section" id="diferenciais">
+        <div class="container">
+            <div class="why-premium-wrapper">
+                <div class="why-premium-content">
+                    <span class="why-premium-badge">Por que escolher a Plano Topo</span>
+
+                    <h2>Mais confiança, agilidade e suporte para a sua obra</h2>
+
+                    <p>
+                        Há 16 anos atuando no segmento de construção civil, a Plano Topo une
+                        variedade de equipamentos, manutenção especializada e atendimento rápido
+                        para entregar mais praticidade e segurança em cada locação.
+                    </p>
+
+                    <div class="why-premium-numbers">
+                        <div class="why-premium-number">
+                            <strong>16 anos</strong>
+                            <span>de atuação no mercado</span>
+                        </div>
+
+                        <div class="why-premium-number">
+                            <strong>+4 marcas</strong>
+                            <span>com assistência autorizada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-premium-steps">
+                    <article class="why-premium-card">
+                        <div class="why-premium-icon">01</div>
+
+                        <div class="why-premium-card-content">
+                            <h3>Equipamentos revisados</h3>
+                            <p>
+                                Todos os equipamentos passam por inspeção e manutenção antes da locação,
+                                garantindo mais segurança, desempenho e confiança na obra.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-premium-card">
+                        <div class="why-premium-icon">02</div>
+
+                        <div class="why-premium-card-content">
+                            <h3>Atendimento rápido</h3>
+                            <p>
+                                Processo simples e direto pelo catálogo e WhatsApp, sem burocracia
+                                e com retorno rápido para o seu orçamento.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-premium-card">
+                        <div class="why-premium-icon">03</div>
+
+                        <div class="why-premium-card-content">
+                            <h3>Variedade para a obra inteira</h3>
+                            <p>
+                                Andaimes, betoneiras, marteletes, geradores, containers e diversos
+                                outros equipamentos para diferentes etapas da construção civil.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="why-premium-card">
+                        <div class="why-premium-icon">04</div>
+
+                        <div class="why-premium-card-content">
+                            <h3>Manutenção autorizada</h3>
+                            <p>
+                                Trabalhamos com marcas reconhecidas no mercado, oferecendo mais
+                                segurança, durabilidade e suporte técnico aos equipamentos.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION PERGUNTAS FREQUENTES-->
+
+    <section class="faq-section" id="duvidas">
+        <div class="container">
+            <div class="faq-header">
+                <span class="section-tag">Dúvidas frequentes</span>
+                <h2>Perguntas frequentes sobre locação e manutenção</h2>
+                <p>
+                    Reunimos algumas respostas para facilitar sua decisão e tornar o processo
+                    de atendimento ainda mais rápido.
+                </p>
+            </div>
+
+            <div class="faq-list">
+                <article class="faq-item active">
+                    <button class="faq-question" type="button">
+                        <span>Como faço para solicitar um orçamento?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Você pode acessar o catálogo, selecionar os equipamentos desejados e
+                            finalizar seu pedido pelo WhatsApp. Nossa equipe retorna com atendimento
+                            rápido e orçamento personalizado.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Os equipamentos são revisados antes da locação?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Sim. Trabalhamos com equipamentos revisados e preparados para uso,
+                            garantindo mais segurança, desempenho e confiabilidade na obra.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Vocês trabalham com entrega de equipamentos?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Sim. A disponibilidade de entrega pode variar conforme a localização
+                            e o tipo de equipamento solicitado. Esse detalhe pode ser alinhado no atendimento.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>É possível solicitar manutenção de equipamentos?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Sim. Também atuamos com manutenção e assistência técnica, inclusive com
+                            marcas autorizadas, oferecendo mais suporte e segurança aos clientes.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Quais tipos de equipamentos estão disponíveis?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Trabalhamos com andaimes, betoneiras, marteletes, geradores, compactadores,
+                            containers, escoras, equipamentos para acabamento e diversas outras soluções
+                            para construção civil.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!--LOCALIZAÇÃO PLANOTOPO-->
     <section class="map-section" id="localizacao">
         <div class="container">
             <div class="map-wrapper">
@@ -402,43 +646,6 @@
         </div>
     </footer>
 
-    <button class="floating-cart" id="floatingCart" aria-label="Abrir carrinho">
-        <span class="floating-cart-icon">🛒</span>
-        <span class="floating-cart-count" id="floatingCartCount">0</span>
-    </button>
-
-    <div class="cart-overlay" id="cartOverlay"></div>
-
-    <aside class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <div>
-                <h3>Seu pedido</h3>
-                <p>Monte seu orçamento</p>
-            </div>
-
-            <button class="cart-close" id="cartClose" aria-label="Fechar carrinho">
-                &times;
-            </button>
-        </div>
-
-        <div class="cart-body" id="cartItems">
-            <div class="cart-empty">
-                <p>Seu carrinho está vazio.</p>
-                <span>Adicione equipamentos para montar seu pedido.</span>
-            </div>
-        </div>
-
-        <div class="cart-footer">
-            <div class="cart-summary">
-                <strong>Total de itens</strong>
-                <span id="cartTotalItems">0</span>
-            </div>
-
-            <button class="cart-whatsapp-btn" id="finishOnWhatsapp">
-                Finalizar pedido no WhatsApp
-            </button>
-        </div>
-    </aside>
 
 
     <script src="script.js"></script>

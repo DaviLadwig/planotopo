@@ -203,6 +203,13 @@
     display: flex;
     flex-direction: column;
     padding: 22px 20px 24px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+
+    /* restante do seu CSS */
 }
 
 .mobile-menu.active {
@@ -299,6 +306,94 @@
     font-weight: 700;
     box-shadow: 0 14px 28px rgba(124, 177, 55, 0.24);
 }
+/*Itens dentro do menu mobile  */
+
+
+.mobile-menu-contact {
+    margin-top: 4px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-menu-socials {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.mobile-social-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: #9fd149;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.mobile-social-btn:hover {
+    background: #89c43c;
+    transform: translateY(-2px);
+}
+
+.mobile-social-btn svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.mobile-contact-info {
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.mobile-contact-city {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.mobile-contact-city strong {
+    color: #689b10;
+    font-size: 1.12rem;
+    letter-spacing: 0.04em;
+}
+
+.mobile-contact-info p {
+    margin: 0 0 18px;
+    color: rgba(0, 0, 0, 0.82);
+}
+
+.mobile-contact-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.mobile-contact-line a {
+    color: #000000;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.mobile-contact-line a:hover {
+    color: #4f6d07;
+}
+
+.mobile-contact-icon {
+    width: 22px;
+    display: inline-flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
 
 /* RESPONSIVO */
 @media (max-width: 980px) {

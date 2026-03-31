@@ -1,305 +1,117 @@
-.hero {
-  padding-top: 96px;
-  background: #f5f7f8;
+.hero-commercial {
+  padding: 18px 0 40px;
+  background: #f5f7fa;
+  margin-top: 0 !important;
+  
 }
 
-.hero-slider {
-  border-radius: 0 0 24px 24px;
-
+.hero-commercial-slider {
   position: relative;
-  width: 100%;
-  height: 68vh;
-  min-height: 520px;
-  max-height: 640px;
   overflow: hidden;
+  border-radius: 34px;
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.1);
+  background: #dfe5eb;
 }
 
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+.hero-commercial-track {
+  display: flex;
+  transition: transform 0.85s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
 }
 
-.hero-slide.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 2;
+.hero-commercial-slide picture,
+.hero-commercial-slide picture source,
+.hero-commercial-slide picture img {
+  display: block;
+  width: 100%;
 }
 
-.hero-slide img {
+.hero-commercial-slide {
+  min-width: 100%;
+  flex: 0 0 100%;
+  height: auto;
+}
+
+.hero-commercial-slide a {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: contrast(1.02) saturate(1.02);
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(8, 17, 14, 0.82) 0%, rgba(8, 17, 14, 0.58) 35%, rgba(8, 17, 14, 0.18) 70%, rgba(8, 17, 14, 0.08) 100%);
-  z-index: 1;
+.hero-commercial-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.hero-content {
+/* removemos qualquer conteúdo por cima */
+.hero-commercial-overlay,
+.hero-commercial-content,
+.hero-commercial-badge,
+.hero-commercial-btn {
+  display: none !important;
+}
+
+.hero-commercial-dots {
   position: absolute;
+  left: 26px;
+  bottom: 18px;
   z-index: 3;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  width: min(560px, 88%);
-  color: #ffffff;
-}
-
-.hero-badge {
-  display: inline-block;
-  margin-bottom: 18px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: rgba(124, 177, 55, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: #b7df61;
-  font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  backdrop-filter: blur(8px);
-}
-
-.hero-content h1 {
-  margin: 0 0 16px;
-  font-size: clamp(1.8rem, 5vw, 2.4rem);
-  line-height: 1.08;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.hero-content p {
-  max-width: 580px;
-  margin: 0 0 28px;
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  padding: 0 22px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition: 0.25s ease;
-}
-
-.btn-primary {
-  background: #7cb137;
-  color: #ffffff;
-  box-shadow: 0 10px 24px rgba(124, 177, 55, 0.28);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  background: #6ea12f;
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
-}
-
-.btn-secondary:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.18);
-}
-
-
-
-.hero-arrow:hover {
-  background: rgba(255, 255, 255, 0.22);
-}
-
-.hero-arrow-left {
-  left: 24px;
-}
-
-.hero-arrow-right {
-  right: 24px;
-}
-
-.hero-dots {
-  position: absolute;
-  left: 7%;
-  bottom: 34px;
-  z-index: 4;
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(12, 18, 26, 0.22);
+  backdrop-filter: blur(8px);
 }
 
-.hero-dot {
-  width: 12px;
-  height: 12px;
+.hero-commercial-dot {
+  width: 10px;
+  height: 10px;
   border: none;
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.35);
   transition: 0.25s ease;
 }
 
-.hero-dot.active {
-  width: 34px;
+.hero-commercial-dot.active {
+  width: 28px;
   border-radius: 999px;
-  background: #7cb137;
+  background: #8dc63f;
 }
 
-@media (max-width: 991px) {
-  .hero-slider {
-    height: 58vh;
-    min-height: 460px;
-    max-height: 560px;
+@media (max-width: 768px) {
+  .hero-commercial {
+    padding: 14px 0 28px;
   }
 
-
-  .hero-arrow {
-    display: none;
+  .hero-commercial-slider {
+    border-radius: 22px;
   }
 
-  .hero-content {
-    left: 24px;
-    right: 24px;
-    width: auto;
-  }
-
-  .hero-arrow-left {
+  .hero-commercial-dots {
     left: 14px;
+    bottom: 10px;
+    gap: 8px;
+    padding: 8px 12px;
   }
 
-  .hero-arrow-right {
-    right: 14px;
+  .hero-commercial-dot {
+    width: 9px;
+    height: 9px;
   }
 
-  .hero-dots {
-    left: 24px;
-    bottom: 24px;
-  }
-
-
-}
-
-@media (max-width: 767px) {
-  .hero {
-    padding-top: 82px;
-  }
-
-  .hero-slider {
-    height: 62vh;
-    min-height: 430px;
-    max-height: 520px;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(180deg,
-        rgba(8, 17, 14, 0.28) 0%,
-        rgba(8, 17, 14, 0.56) 38%,
-        rgba(8, 17, 14, 0.86) 100%);
-  }
-
-  .hero-content {
-    left: 20px;
-    right: 20px;
-    bottom: 28px;
-    top: auto;
-    transform: none;
-    width: auto;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(2.1rem, 7vw, 3rem);
-    line-height: 1;
-    margin-bottom: 12px;
-  }
-
-  .hero-content p {
-    font-size: 0.98rem;
-    line-height: 1.5;
-    margin-bottom: 18px;
-  }
-
-  .hero-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .btn {
-    min-height: 48px;
-    padding: 0 18px;
-    font-size: 0.92rem;
-  }
-
-  .hero-dots {
-    left: 20px;
-    bottom: 12px;
+  .hero-commercial-dot.active {
+    width: 22px;
   }
 }
 
-@media (max-width: 520px) {
-  .hero-slider {
-    min-height: 440px;
-  }
 
-  .hero-content {
-    top: auto;
-    bottom: 74px;
-    transform: none;
-  }
-
-  .hero-badge {
-    margin-bottom: 14px;
-    padding: 8px 14px;
-    font-size: 0.84rem;
-  }
-
-  .hero-dots {
-    bottom: 5px;
-
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-slider {
-    height: 58vh;
-    min-height: 400px;
-    max-height: 480px;
-  }
-
-  .hero-content {
-    left: 16px;
-    right: 16px;
-    bottom: 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero-content p {
-    font-size: 0.94rem;
-  }
+/*FUNCIONAMENTO RESPONSIVO DOS BANNERS SECTION HERO*/
+.hero-commercial-slide picture,
+.hero-commercial-slide picture img {
+  width: 100%;
+  display: block;
 }
