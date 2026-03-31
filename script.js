@@ -128,8 +128,7 @@ const equipmentData = [
         descricao: "Betoneira Menegotti de 400 litros ideal para preparo de concreto e argamassa em obras de pequeno e médio porte.",
         imagens: [
             "./assets/images/betoneira-400-1.png",
-            "./assets/images/betoneira-400-2.png",
-            "./assets/images/betoneira-400-3.png"
+            "./assets/images/betoneira-400-2.png"
         ],
         fichaTecnica: {
             Marca: "Menegotti",
@@ -333,8 +332,7 @@ const equipmentData = [
         descricao: "Cortador de piso tipo Serra Clip para cortes precisos em concreto e asfalto.",
         imagens: [
             "./assets/images/cortador-piso-1.png",
-            "./assets/images/cortador-piso-2.png",
-            "./assets/images/cortador-piso-3.png"
+            "./assets/images/cortador-piso-2.png"
         ],
         fichaTecnica: {
             Aplicação: "Corte de concreto e asfalto",
@@ -557,6 +555,24 @@ const equipmentData = [
             Altura: "2,97 m",
             Largura: "2,35 m",
             Comprimento: "6 m"
+        }
+    },
+    {
+        id: 128,
+        nome: "Politriz 7 pol",
+        categoria: "Acabamento",
+        descricao: "Politriz para polimento e acabamento de superfícies.",
+        imagens: [
+            "./assets/images/politriz7-1.png",
+            "./assets/images/politriz7-2.png",
+            "./assets/images/politriz7-3.png"
+        ],
+        fichaTecnica: {
+            Aplicação: "Polimento",
+            Uso: "Pisos e superfícies",
+            Alimentação: "Elétrica",
+            Potência: "1200 watts"
+            
         }
     }
 
