@@ -39,10 +39,17 @@
     padding: 0 22px;
     border-radius: 16px;
     text-decoration: none;
-    background: linear-gradient(135deg, #89c43c, #6ea12f);
+    background: linear-gradient(135deg, #3c55c4, #2f4ba1);
     color: #ffffff;
     font-weight: 800;
-    box-shadow: 0 16px 30px rgba(124, 177, 55, 0.24);
+    box-shadow: 0 16px 30px rgba(55, 63, 177, 0.24);
+    transition: 0.5s;
+}
+
+.how-main-btn:hover {
+    background: #8dc63f;
+    box-shadow: 0 16px 30px rgba(112, 177, 55, 0.24);
+    transition: 0.5s;
 }
 
 .how-steps {

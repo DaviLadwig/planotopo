@@ -66,10 +66,15 @@
     font-weight: 700;
     box-shadow: 0 14px 30px rgba(124, 177, 55, 0.24);
     transition: 0.25s ease;
+    transition: 0.5s;
 }
 
 .footer-whatsapp-btn:hover {
     transform: translateY(-2px);
+    background: #3c55c4;
+    transition: 0.5s;
+    box-shadow: 0 14px 30px rgba(55, 81, 177, 0.24);
+
 }
 
 .footer-column h4 {
