@@ -71,7 +71,7 @@
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #8dc63f, #6ea12f);
+    background: linear-gradient(135deg, #0d2143, #0d2143);
     transform: scale(0);
     transform-origin: top left;
     transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
@@ -81,7 +81,7 @@
 .why-premium-number:hover {
     transform: translateY(-4px);
     border-color: #8dc63f;
-    box-shadow: 0 24px 44px rgba(111, 164, 45, 0.22);
+    box-shadow: 0 24px 44px rgba(47, 45, 164, 0.22);
 }
 
 .why-premium-number:hover::before {
@@ -92,7 +92,7 @@
 .why-premium-number span {
     position: relative;
     z-index: 2;
-    transition: color 2s ease;
+    transition: color 1s ease;
 }
 
 .why-premium-number strong {
@@ -143,7 +143,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #8dc63f, #6ea12f);
+    background: linear-gradient(135deg, #7fe611, #58ae29);
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: 800;

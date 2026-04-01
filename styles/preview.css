@@ -34,10 +34,11 @@
     padding: 0 22px;
     border-radius: 16px;
     text-decoration: none;
-    background: #3c55c4;
+    background: #0d2143;
     color: #ffffff;
     font-weight: 800;
     white-space: nowrap;
+    border: none;
 }
 
 .catalog-preview-grid {

@@ -181,7 +181,9 @@ const equipmentData = [
         categoria: "Segurança",
         descricao: "Sistema de guarda corpo para proteção em áreas elevadas e bordas de lajes.",
         imagens: [
-            "./assets/images/guardacorpo-1.png"
+            "./assets/images/guardacorpo-1.png",
+            "./assets/images/guardacorpo-2.png",
+            "./assets/images/guardacorpo-3.png"
         ],
         fichaTecnica: {
             Material: "Aço galvanizado",
@@ -280,9 +282,9 @@ const equipmentData = [
         categoria: "Energia",
         descricao: "Gerador de 8 kVA para maior autonomia e alimentação de múltiplos equipamentos.",
         imagens: [
-            "./assets/images/gerador-8-1.jpg",
-            "./assets/images/gerador-8-2.jpg",
-            "./assets/images/gerador-8-3.jpg"
+            "./assets/images/gerador-8-1.png",
+            "./assets/images/gerador-8-2.png",
+            "./assets/images/gerador-8-3.png"
         ],
         fichaTecnica: {
             Potência: "8 kVA",
@@ -548,7 +550,7 @@ const equipmentData = [
         imagens: [
             "./assets/images/container-1.png",
             "./assets/images/container-2.png",
-            "./assets/images/container-3.jpg"
+            "./assets/images/container-3.png"
         ],
         fichaTecnica: {
             Material: "Aço corten",
@@ -572,7 +574,7 @@ const equipmentData = [
             Uso: "Pisos e superfícies",
             Alimentação: "Elétrica",
             Potência: "1200 watts"
-            
+
         }
     }
 
@@ -761,7 +763,7 @@ function finishOrderOnWhatsapp() {
         return;
     }
     //NUMERO WHATS---------------------------------------------------------------------------------------------------------------
-    const phone = "5598991713898"; // troque pelo número real
+    const phone = "5598987575367"; // troque pelo número real
     const message = generateWhatsappMessage();
     const url = `https://wa.me/${phone}?text=${message}`;
 

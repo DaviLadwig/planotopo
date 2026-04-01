@@ -59,7 +59,7 @@
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #8dc63f, #6fa42d);
+    background: linear-gradient(135deg, #0d2143, #0d2143);
     transform: scale(0);
     transform-origin: top left;
     transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
@@ -69,7 +69,7 @@
 .about-highlight-card:hover {
     transform: translateY(-6px);
     border-color: #8dc63f;
-    box-shadow: 0 24px 48px rgba(111, 164, 45, 0.22);
+    box-shadow: 0 24px 48px rgba(85, 45, 164, 0.22);
 }
 
 .about-highlight-card:hover::before {

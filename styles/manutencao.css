@@ -9,10 +9,10 @@
     border-radius: 36px;
     padding: 52px 38px 42px;
     background:
-        radial-gradient(circle at top left, rgba(143, 198, 61, 0.16), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(143, 198, 61, 0.12), transparent 24%),
-        linear-gradient(135deg, #08130f 0%, #0d1e15 45%, #14301a 100%);
-    box-shadow: 0 30px 70px rgba(8, 16, 12, 0.22);
+        radial-gradient(circle at top left, rgba(61, 93, 198, 0.333), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(61, 93, 198, 0.12), transparent 24%),
+        linear-gradient(135deg, #080813 0%, #120d1e 45%, #141630 100%);
+    box-shadow: 0 30px 70px rgba(8, 9, 16, 0.22);
 }
 
 .authorized-premium-header {

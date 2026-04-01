@@ -1,0 +1,164 @@
+.catalog-banner {
+    padding: 28px 0 26px;
+    background: #f5f7fa;
+}
+
+.catalog-banner-box {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 28px;
+    min-height: 320px;
+    padding: 38px 38px 38px 42px;
+    border-radius: 34px;
+    background:
+        radial-gradient(circle at top right, rgba(141, 198, 63, 0.16), transparent 24%),
+        linear-gradient(135deg, #08130f 0%, #0d1e15 45%, #16311b 100%);
+    box-shadow: 0 28px 56px rgba(8, 16, 12, 0.16);
+}
+
+.catalog-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+}
+
+.catalog-banner-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #dff5ac;
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(6px);
+}
+
+.catalog-banner-content h2 {
+    margin: 0 0 14px;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+}
+
+.catalog-banner-content p {
+    margin: 0 0 22px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 560px;
+}
+
+.catalog-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.catalog-banner-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 22px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 800;
+    transition: 0.25s ease;
+}
+
+.catalog-banner-btn.primary {
+    background: linear-gradient(135deg, #8dc63f, #6ea12f);
+    color: #ffffff;
+    box-shadow: 0 16px 28px rgba(124, 177, 55, 0.24);
+}
+
+.catalog-banner-btn.primary:hover {
+    transform: translateY(-2px);
+}
+
+.catalog-banner-btn.secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.catalog-banner-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.catalog-banner-media {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalog-banner-media img {
+    width: 100%;
+    max-width: 520px;
+    max-height: 280px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 980px) {
+    .catalog-banner-box {
+        grid-template-columns: 1fr;
+        padding: 30px 26px;
+        gap: 18px;
+    }
+
+    .catalog-banner-media {
+        justify-content: flex-start;
+    }
+
+    .catalog-banner-media img {
+        max-width: 420px;
+        max-height: 220px;
+    }
+}
+
+@media (max-width: 640px) {
+    .catalog-banner {
+        padding: 18px 0 22px;
+    }
+
+    .catalog-banner-box {
+        min-height: auto;
+        padding: 24px 18px;
+        border-radius: 24px;
+    }
+
+    .catalog-banner-content h2 {
+        font-size: 2.1rem;
+    }
+
+    .catalog-banner-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .catalog-banner-actions {
+        flex-direction: column;
+    }
+
+    .catalog-banner-btn {
+        width: 100%;
+    }
+
+    .catalog-banner-media img {
+        max-width: 100%;
+        max-height: 180px;
+    }
+}

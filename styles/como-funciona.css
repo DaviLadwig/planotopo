@@ -39,7 +39,7 @@
     padding: 0 22px;
     border-radius: 16px;
     text-decoration: none;
-    background: linear-gradient(135deg, #3c55c4, #2f4ba1);
+    background: #0d2143;
     color: #ffffff;
     font-weight: 800;
     box-shadow: 0 16px 30px rgba(55, 63, 177, 0.24);
@@ -85,7 +85,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #8dc63f, #6ea12f);
+    background: linear-gradient(135deg, #7fe611, #58ae29);
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: 800;

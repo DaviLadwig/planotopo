@@ -19,14 +19,14 @@
     width: 100%;
     min-height: 42px;
     border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #89c43c, #6ea12f);
+    border-radius: 5px;
+    background: linear-gradient(135deg, #7fe611, #58ae29);
     color: #ffffff;
     font-size: 0.92rem;
     font-weight: 700;
     cursor: pointer;
     transition: 0.25s ease;
-    box-shadow: 0 10px 20px rgba(124, 177, 55, 0.18);
+    box-shadow: 0 10px 20px rgba(67, 55, 177, 0.18);
 }
 
 .add-to-cart-btn:hover {
