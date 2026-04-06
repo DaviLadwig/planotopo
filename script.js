@@ -544,7 +544,7 @@ const equipmentData = [
     },
     {
         id: 127,
-        nome: "Container Almoxerifado",
+        nome: "Container Almoxarifado",
         categoria: "Containers",
         descricao: "Container para gurdar e administrar equipamentos.",
         imagens: [
