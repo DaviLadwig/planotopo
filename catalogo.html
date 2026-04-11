@@ -11,166 +11,247 @@
 <body>
 
     <!-- HEADER -->
-    <header class="site-header" id="siteHeader">
-        <div class="header-container">
-            <a href="#" class="brand">
-                <img src="./assets/icon/logo-planotopo.png" alt="Plano Topo Equipamentos" class="brand-logo">
-                <div class="brand-text">
+    <header class="store-header" id="siteHeader">
+        <div class="store-header-top">
+            <div class="container store-header-top-inner">
+                <a href="index.html" class="store-brand">
+                    <img src="./assets/icon/logo_planotopo.png" alt="Plano Topo Equipamentos" class="store-brand-logo">
+                    <div class="store-brand-text">
+                    </div>
+                </a>
 
+                <div class="store-search desktop-search">
+                    <form class="store-search-form" autocomplete="off">
+                        <div class="store-search-box">
+                            <input type="text" id="catalogSearchInput" placeholder="O que você procura?"
+                                aria-label="Buscar equipamentos">
+
+                            <button type="submit" aria-label="Buscar">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
+                                    <path d="M20 20L17 17" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+
+                            <div class="store-search-suggestions" id="searchSuggestions"></div>
+                        </div>
+                    </form>
                 </div>
+
+                <div class="store-header-actions">
+                    <a href="tel:+558520100115" class="mobile-header-contact" aria-label="Telefone">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path
+                                d="M22 16.92V19.2C22 19.64 21.64 20 21.2 20C10.6 20 4 13.4 4 2.8C4 2.36 4.36 2 4.8 2H7.1C7.49 2 7.82 2.28 7.89 2.66L8.45 5.7C8.51 6.03 8.4 6.37 8.15 6.6L6.05 8.55C7.2 11.37 9.63 13.8 12.45 14.95L14.4 12.85C14.63 12.6 14.97 12.49 15.3 12.55L18.34 13.11C18.72 13.18 19 13.51 19 13.9V16.2C19 16.64 18.64 17 18.2 17H16.92"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+
+                    <a href="mailto:contato@planotopo.com.br" class="store-header-icon desktop-only"
+                        aria-label="E-mail">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path
+                                d="M4 5H20C21.1 5 22 5.9 22 7V17C22 18.1 21.1 19 20 19H4C2.9 19 2 18.1 2 17V7C2 5.9 2.9 5 4 5Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M22 7L12 13L2 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+
+
+                    <button class="store-menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="store-header-bottom desktop-nav-wrap">
+            <div class="container">
+                <nav class="store-nav">
+                    <a href="index.html">Início</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="#manutencoes">Manutenções</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-header">
+        <div class="mobile-header-bar">
+            <a href="index.html" class="mobile-header-brand">
+                <img src="./assets/icon/logo_planotopo.png" alt="Plano Topo Equipamentos">
             </a>
 
-            <nav class="desktop-nav">
-                <a href="index.html">Início</a>
-                <a href="catalogo.html">Catálogo</a>
-                <a href="#contato">Contato</a>
-            </nav>
+            <div class="mobile-header-actions">
+                <a href="tel:+558520100115" class="mobile-header-contact" aria-label="Telefone">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path
+                            d="M22 16.92V19.2C22 19.64 21.64 20 21.2 20C10.6 20 4 13.4 4 2.8C4 2.36 4.36 2 4.8 2H7.1C7.49 2 7.82 2.28 7.89 2.66L8.45 5.7C8.51 6.03 8.4 6.37 8.15 6.6L6.05 8.55C7.2 11.37 9.63 13.8 12.45 14.95L14.4 12.85C14.63 12.6 14.97 12.49 15.3 12.55L18.34 13.11C18.72 13.18 19 13.51 19 13.9V16.2C19 16.64 18.64 17 18.2 17H16.92"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
 
-            <div class="header-actions">
-                <a href="https://wa.me/559887575367" class="header-whatsapp-btn">Solicitar orçamento</a>
-
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <button class="mobile-header-toggle" id="menuToggleMobile" aria-label="Abrir menu"
+                    aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
             </div>
         </div>
-    </header>
 
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        <!--MENU MOBILE-->
+        <div class="mobile-header-search">
+            <form class="store-search-form" autocomplete="off">
+                <div class="store-search-box">
+                    <input type="text" id="catalogSearchInputMobile" placeholder="Buscar equipamentos"
+                        aria-label="Buscar equipamentos">
 
-    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-        <div class="mobile-menu-top">
-            <div class="mobile-brand">
-                <img src="./assets/icon/logo-planotopo.png" alt="Plano Topo Equipamentos">
+                    <button type="submit" aria-label="Buscar">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
+                            <path d="M20 20L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+
+                    <div class="store-search-suggestions" id="searchSuggestionsMobile"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mobile-panel-overlay" id="mobileMenuOverlay"></div>
+
+    <aside class="mobile-drawer" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-drawer-top">
+            <div class="mobile-drawer-brand">
+                <img src="assets/icon/logo_planotopo.png" alt="Plano Topo Equipamentos">
                 <div>
-                    <span>Equipamentos para obra</span>
+                    <strong>Plano Topo</strong>
+                    <span>Locação de Equipamentos</span>
                 </div>
             </div>
 
-            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
+            <button class="mobile-drawer-close" id="mobileMenuClose" aria-label="Fechar menu">
                 &times;
             </button>
         </div>
 
-        <nav class="mobile-nav">
+        <nav class="mobile-drawer-nav">
             <a href="index.html">Início</a>
-            <a href="catalogo.html">Catalogo</a>
+            <a href="catalogo.html">Catálogo</a>
             <a href="#contato">Contato</a>
         </nav>
 
-        <div class="mobile-menu-contact">
-            <div class="mobile-menu-socials">
-                <a href="https://www.instagram.com/planotopo_slz?igsh=MW9zaXB0b2x0ODFhdA%3D%3D" class="mobile-social-btn" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path
-                            d="M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2Z"
-                            stroke="currentColor" stroke-width="2" />
-                        <path
-                            d="M16 11.37C16.1234 12.2022 15.9812 13.0521 15.5937 13.799C15.2062 14.5459 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2385 16.0396 11.4079 15.9059C10.5773 15.7721 9.80971 15.3797 9.21479 14.7848C8.61987 14.1899 8.22749 13.4223 8.09374 12.5917C7.95999 11.7611 8.09167 10.9095 8.46995 10.158C8.84823 9.40648 9.4537 8.79335 10.2006 8.40585C10.9475 8.01835 11.7974 7.87613 12.6296 7.99955C13.4789 8.12547 14.2659 8.52102 14.8728 9.12789C15.4796 9.73477 15.8752 10.5218 16.0011 11.3711L16 11.37Z"
-                            stroke="currentColor" stroke-width="2" />
-                        <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                </a>
+        <div class="mobile-drawer-address">
+            <h4>EndereçoS Físicos</h4><br>
 
-                <a href="https://www.facebook.com/PlanotopoEquipamentos?mibextid=wwXIfr&rdid=7heCbvYqgVELBWuM&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Cp9859P2%2F%3Fmibextid%3DwwXIfr#" class="mobile-social-btn" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path
-                            d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
-                            fill="currentColor" />
-                    </svg>
-                </a>
+            <h4>Locação</h4>
+            <p>
+                R. Cel. Belchior, 9 - Qd. 25, Lote 3,5,7<br>
+                Ponta D'areia, São Luís - MA<br>
+                CEP: 65077-653
+                <br>
+            </p> <br><br>
 
-                <a href="https://www.linkedin.com/company/planotopo-equipamentos/" class="mobile-social-btn" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path
-                            d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
-                            fill="currentColor" />
-                        <path d="M6 9H2V21H6V9Z" fill="currentColor" />
-                        <path
-                            d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
-                            fill="currentColor" />
-                    </svg>
-                </a>
-            </div>
+            <h4>Vendas</h4>
+            <p>
+                Av. Guajajaras, 02 - Loja 03 <br>
+                São Cristovao, São Luís - MA<br>
+                CEP: 65056-045<br>
 
-
-            <div class="mobile-contact-info">
-                <div class="mobile-contact-city">
-                    <span class="mobile-contact-icon">📍</span>
-                    <strong>SÃO LUÍS - MA</strong>
-                </div>
-
-                <p>
-                    R. Cel. Belchior, 9 - Qd. 25, Lote 3,5,7<br>
-                    Ponta D'areia<br>
-                    São Luís - MA <br>
-                    CEP: 5077-653
-                </p>
-
-            </div>
+            </p>
         </div>
 
-        <div class="mobile-menu-footer">
-            <a href="https://wa.me/559887575367" class="mobile-whatsapp-btn">Falar no WhatsApp</a>
+        <div class="mobile-drawer-socials">
+            <a href="https://www.instagram.com/planotopo_slz/" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                        d="M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2Z"
+                        stroke="currentColor" stroke-width="2" />
+                    <path
+                        d="M16 11.37C16.1234 12.2022 15.9812 13.0521 15.5937 13.799C15.2062 14.5459 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2385 16.0396 11.4079 15.9059C10.5773 15.7721 9.80971 15.3797 9.21479 14.7848C8.61987 14.1899 8.22749 13.4223 8.09374 12.5917C7.95999 11.7611 8.09167 10.9095 8.46995 10.158C8.84823 9.40648 9.4537 8.79335 10.2006 8.40585C10.9475 8.01835 11.7974 7.87613 12.6296 7.99955"
+                        stroke="currentColor" stroke-width="2" />
+                    <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </a>
+
+            <a href="https://www.facebook.com/PlanotopoEquipamentos/" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                        d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                        fill="currentColor" />
+                </svg>
+            </a>
+
+            <a href="linkedin.com/company/planotopo-equipamentos" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                        d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
+                        fill="currentColor" />
+                    <path d="M6 9H2V21H6V9Z" fill="currentColor" />
+                    <path
+                        d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                        fill="currentColor" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="mobile-drawer-footer">
+            <a href="https://wa.me/5585992052636" target="_blank" class="mobile-drawer-whatsapp">
+                Falar no WhatsApp
+            </a>
         </div>
     </aside>
-
-    <!--BANNERS CATALOGO-->
-    <section class="hero-commercial">
-        <div class="container">
-            <div class="hero-commercial-slider" id="heroCommercialSlider">
-                <div class="hero-commercial-track" id="heroCommercialTrack">
-                    <article class="hero-commercial-slide">
-                        <a href="./catalogo.html">
-                            <picture>
-                                <source media="(max-width: 768px)" srcset="./assets/images/catalogomob-1.png">
-                                <source media="(max-width: 1024px)" srcset="./assets/images/catalogotab-1.png">
-                                <img src="./assets/images/catalogodesk-1.jpg" alt="Banner catálogo">
-                            </picture>
-                        </a>
-                    </article>
-
-                    <article class="hero-commercial-slide">
-                        <a href="./catalogo.html">
-                            <picture>
-                                <source media="(max-width: 768px)" srcset="./assets/images/catalogomob-2.png">
-                                <source media="(max-width: 1024px)" srcset="./assets/images/catalogotab-2.png">
-                                <img src="./assets/images/catalogodesk-2.jpg" alt="Banner locação">
-                            </picture>
-                        </a>
-                    </article>
-                </div>
-
-                <div class="hero-commercial-dots" id="heroCommercialDots">
-                    <button class="hero-commercial-dot active" data-slide="0" aria-label="Ir para slide 1"></button>
-                    <button class="hero-commercial-dot" data-slide="1" aria-label="Ir para slide 2"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- MARKETPLACE SECTION -->
     <section class="marketplace" id="equipamentos">
         <div class="container">
             <div class="marketplace-header">
-                <span class="section-badge">Catálogo</span>
+                <span class="section-badge">Catálogo de locações</span>
                 <h2>Encontre o equipamento certo para sua obra</h2>
                 <p>
                     Navegue por categorias, veja os detalhes do equipamento e monte seu pedido.
                 </p>
             </div>
 
-            <div class="categories-wrapper">
-                <div class="categories" id="categories"></div>
+            <div class="catalog-mobile-actions">
+                <button class="catalog-categories-toggle" id="catalogCategoriesToggle" type="button">
+                    Categorias
+                </button>
             </div>
 
-            <div class="products" id="products"></div>
+            <div class="marketplace-layout">
+                <aside class="catalog-sidebar" id="catalogSidebar">
+                    <div class="catalog-sidebar-box">
+                        <div class="catalog-sidebar-header">
+                            <h3>Equipamentos</h3>
+                            <button class="catalog-sidebar-close" id="catalogSidebarClose" type="button"
+                                aria-label="Fechar categorias">
+                                ×
+                            </button>
+                        </div>
+
+                        <div class="categories categories-vertical" id="categories"></div>
+                    </div>
+                </aside>
+
+                <div class="catalog-main">
+                    <div id="searchFeedback" class="search-feedback"></div>
+                    <div class="products" id="products"></div>
+                </div>
+            </div>
         </div>
+
+        <div class="catalog-sidebar-overlay" id="catalogSidebarOverlay"></div>
     </section>
 
+    <!--MODAL DE PRODUTOS-->
     <div class="product-modal" id="productModal">
         <div class="product-modal-overlay" id="productModalOverlay"></div>
 
@@ -210,53 +291,66 @@
 
 
     <!--RODAPE-->
-    <footer class="site-footer" id="contato">
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="#" class="footer-logo">
-                        <img src="./assets/icon/logo-planotopo.png" alt="Plano Topo Equipamentos">
-                        <div>
-                            <strong>Planotopo</strong>
-                            <span>Locação e manutenção de equipamentos</span>
-                        </div>
+                    <a href="index.html" class="footer-logo">
+                        <img src="./assets/icon/logo_planotopo.png" alt="Planotopo Equipamentos">
                     </a>
 
-                    <p>
-                        Soluções em locação de equipamentos para obras, com atendimento ágil,
-                        equipamentos revisados e suporte confiável para sua operação.
+                    <p class="footer-description">
+                        Soluções em locação, vendas, manutenção e suporte para obras civis,
+                        com atendimento confiável, equipamentos de qualidade e parceria para o seu dia a dia.
                     </p>
 
+                    <div class="footer-contact-list">
+                        <a href="tel:+5585987575367">(85) 98757-5367</a>
+                        <a href="mailto:contato@planotopo.com.br">contato@planotopo.com.br</a>
+                    </div>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Institucional</h4>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
                     <ul>
-                        <li><a href="#equipamentos">Equipamentos</a></li>
-                        <li><a href="#categorias">Categorias</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="manutencoes.html">Manutenções</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Categorias</h4>
-                    <ul>
-                        <li><a href="catalogo.html">Betoneiras</a></li>
-                        <li><a href="catalogo.html">Marteletes</a></li>
-                        <li><a href="catalogo.html">Geradores</a></li>
-                        <li><a href="catalogo.html">Andaimes</a></li>
-                        <li><a href="catalogo.html">Compactadores</a></li>
-                    </ul>
+                <div class="footer-locations">
+                    <h4>Unidades</h4>
+
+                    <div class="footer-location-item">
+                        <strong>Locação</strong>
+                        <p>
+                            R. Cel. Belchior, 9 - Qd. 25, Lote 3,5,7<br>
+                            Ponta D'areia, São Luís - MA<br>
+                            CEP: 65077-653
+                        </p>
+                    </div>
+
+                    <div class="footer-location-item">
+                        <strong>Vendas</strong>
+                        <p>
+                            Av. Guajajaras, 02 - Loja 03 -<br>
+                            São Cristovao, São Luís - MA<br>
+                            CEP: 65056-045
+                        </p>
+                    </div>
                 </div>
 
-                <div class="footer-column">
-                    <h4>Contato</h4>
-                    <ul class="footer-contact">
-                        <li>WhatsApp: (98) 98757-5367</li>
-                        <li>Email: adm03@planotopo.com</li>
-                        <li>Atendimento: Segunda a Sábado</li>
-                        <li>São Luis - MA</li>
-                    </ul>
+                <div class="footer-contact">
+                    <h4>Atendimento</h4>
+
+                    <p>Fale com nossa equipe para locação, compra de equipamentos e suporte técnico.</p>
+
+                    <div class="footer-actions">
+                        <a href="#" class="footer-btn footer-btn-primary">WhatsApp</a>
+                        <a href="#localizacao" class="footer-btn footer-btn-secondary">Ver localizações</a>
+                    </div>
                 </div>
             </div>
 
@@ -265,6 +359,9 @@
             </div>
         </div>
     </footer>
+
+
+
 
 
     <!--CARRINHO DE PEDIDOS-->
@@ -307,6 +404,10 @@
     </aside>
 
     <script src="script.js"></script>
+    <script src="header.js"></script>
+    <script src="categoria.js"></script>
+
+
 </body>
 
 </html>

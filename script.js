@@ -1,55 +1,4 @@
-const siteHeader = document.getElementById("siteHeader");
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-const mobileMenuClose = document.getElementById("mobileMenuClose");
-const mobileMenuLinks = document.querySelectorAll(".mobile-nav a");
 
-function openMobileMenu() {
-    mobileMenu.classList.add("active");
-    mobileMenuOverlay.classList.add("active");
-    menuToggle.setAttribute("aria-expanded", "true");
-    mobileMenu.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-}
-
-function closeMobileMenu() {
-    mobileMenu.classList.remove("active");
-    mobileMenuOverlay.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded", "false");
-    mobileMenu.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-}
-
-if (menuToggle) {
-    menuToggle.addEventListener("click", openMobileMenu);
-}
-
-if (mobileMenuClose) {
-    mobileMenuClose.addEventListener("click", closeMobileMenu);
-}
-
-if (mobileMenuOverlay) {
-    mobileMenuOverlay.addEventListener("click", closeMobileMenu);
-}
-
-mobileMenuLinks.forEach(link => {
-    link.addEventListener("click", closeMobileMenu);
-});
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 12) {
-        siteHeader.classList.add("scrolled");
-    } else {
-        siteHeader.classList.remove("scrolled");
-    }
-});
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
-        closeMobileMenu();
-    }
-});
 
 //================================================================================================================================
 //FUNCIONAMENTO DO FAQ PARA ABIR E FECHAR DUVIDA
@@ -69,54 +18,21 @@ faqItems.forEach((item) => {
     });
 });
 
-//================================================================================================================================
-//HERO SECTION CARROSSEL
 
-const heroCommercialTrack = document.getElementById("heroCommercialTrack");
-const heroCommercialDots = document.querySelectorAll(".hero-commercial-dot");
-const heroCommercialSlides = document.querySelectorAll(".hero-commercial-slide");
+function mostrarFeedbackBusca(termo, quantidade) {
+    const feedback = document.getElementById("searchFeedback");
+    if (!feedback) return;
 
-let currentHeroCommercial = 0;
-let heroCommercialInterval;
+    if (!termo) {
+        feedback.innerHTML = "";
+        return;
+    }
 
-function updateHeroCommercialSlider() {
-    if (!heroCommercialTrack) return;
-
-    heroCommercialTrack.style.transform = `translateX(-${currentHeroCommercial * 100}%)`;
-
-    heroCommercialDots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentHeroCommercial);
-    });
+    feedback.innerHTML = `
+        <p>Busca por: <strong>${termo}</strong> • ${quantidade} resultado(s)</p>
+    `;
 }
 
-function nextHeroCommercialSlide() {
-    currentHeroCommercial = (currentHeroCommercial + 1) % heroCommercialSlides.length;
-    updateHeroCommercialSlider();
-}
-
-function startHeroCommercialAutoplay() {
-    heroCommercialInterval = setInterval(() => {
-        nextHeroCommercialSlide();
-    }, 5000);
-}
-
-function resetHeroCommercialAutoplay() {
-    clearInterval(heroCommercialInterval);
-    startHeroCommercialAutoplay();
-}
-
-heroCommercialDots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-        currentHeroCommercial = Number(dot.dataset.slide);
-        updateHeroCommercialSlider();
-        resetHeroCommercialAutoplay();
-    });
-});
-
-if (heroCommercialSlides.length > 0) {
-    updateHeroCommercialSlider();
-    startHeroCommercialAutoplay();
-}
 
 //==================================================================================================================================
 //MARKETPLACE JS
@@ -1003,3 +919,4 @@ if (finishOnWhatsapp) {
 renderCategories();
 renderProducts();
 updateCartUI();
+aplicarBuscaInicialDaURL();

@@ -1,117 +1,94 @@
-.hero-commercial {
-  padding: 18px 0 40px;
-  background: #f5f7fa;
-  margin-top: 0 !important;
-  
-}
-
-.hero-commercial-slider {
+.hero-planotopo-banner {
   position: relative;
-  overflow: hidden;
-  border-radius: 34px;
-  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.1);
-  background: #dfe5eb;
+  padding: 120px 20px 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 58%, transparent 58%);
+  z-index: 1;
 }
 
-.hero-commercial-track {
-  display: flex;
-  transition: transform 0.85s cubic-bezier(0.65, 0, 0.35, 1);
-  will-change: transform;
+.hero-planotopo-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.hero-commercial-slide picture,
-.hero-commercial-slide picture source,
-.hero-commercial-slide picture img {
-  display: block;
-  width: 100%;
-}
-
-.hero-commercial-slide {
-  min-width: 100%;
-  flex: 0 0 100%;
-  height: auto;
-}
-
-.hero-commercial-slide a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-commercial-slide img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* removemos qualquer conteúdo por cima */
-.hero-commercial-overlay,
-.hero-commercial-content,
-.hero-commercial-badge,
-.hero-commercial-btn {
-  display: none !important;
-}
-
-.hero-commercial-dots {
-  position: absolute;
-  left: 26px;
-  bottom: 18px;
+.hero-banner-box {
+  position: relative;
   z-index: 3;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow:
+    0 25px 70px rgba(23, 63, 149, 0.16),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hero-banner-box img {
+  width: 100%;
+  display: block;
+}
+
+.hero-banner-full {
+  width: 100%;
+  min-height: 100vh;
+  padding: 110px 20px 20px;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(12, 18, 26, 0.22);
-  backdrop-filter: blur(8px);
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-.hero-commercial-dot {
-  width: 10px;
-  height: 10px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.42);
-  cursor: pointer;
-  transition: 0.25s ease;
+.hero-banner-wrap {
+  width: 100%;
+  max-width: 1800px;
+  height: calc(100vh - 130px);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.10),
+    0 10px 30px rgba(23, 63, 149, 0.12);
+  background: #ffffff;
 }
 
-.hero-commercial-dot.active {
-  width: 28px;
-  border-radius: 999px;
-  background: #8dc63f;
+.hero-banner-wrap picture,
+.hero-banner-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-@media (max-width: 768px) {
-  .hero-commercial {
-    padding: 14px 0 28px;
+.hero-banner-wrap img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-banner-full {
+    padding: 95px 16px 16px;
+    min-height: 100vh;
   }
 
-  .hero-commercial-slider {
+  .hero-banner-wrap {
+    height: calc(100vh - 111px);
     border-radius: 22px;
   }
-
-  .hero-commercial-dots {
-    left: 14px;
-    bottom: 10px;
-    gap: 8px;
-    padding: 8px 12px;
-  }
-
-  .hero-commercial-dot {
-    width: 9px;
-    height: 9px;
-  }
-
-  .hero-commercial-dot.active {
-    width: 22px;
-  }
 }
 
+/* Celular */
+@media (max-width: 767px) {
+  .hero-banner-full {
+    padding: 82px 10px 10px;
+    min-height: 100svh;
+  }
 
-/*FUNCIONAMENTO RESPONSIVO DOS BANNERS SECTION HERO*/
-.hero-commercial-slide picture,
-.hero-commercial-slide picture img {
-  width: 100%;
-  display: block;
+  .hero-banner-wrap {
+    height: calc(100svh - 92px);
+    border-radius: 16px;
+  }
+
+  .hero-banner-wrap img {
+    object-fit: cover;
+    object-position: center;
+  }
 }
