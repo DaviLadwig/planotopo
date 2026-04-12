@@ -1,39 +1,4 @@
 
-
-//================================================================================================================================
-//FUNCIONAMENTO DO FAQ PARA ABIR E FECHAR DUVIDA
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question");
-
-    question.addEventListener("click", () => {
-        const isActive = item.classList.contains("active");
-
-        faqItems.forEach((faq) => faq.classList.remove("active"));
-
-        if (!isActive) {
-            item.classList.add("active");
-        }
-    });
-});
-
-
-function mostrarFeedbackBusca(termo, quantidade) {
-    const feedback = document.getElementById("searchFeedback");
-    if (!feedback) return;
-
-    if (!termo) {
-        feedback.innerHTML = "";
-        return;
-    }
-
-    feedback.innerHTML = `
-        <p>Busca por: <strong>${termo}</strong> • ${quantidade} resultado(s)</p>
-    `;
-}
-
-
 //==================================================================================================================================
 //MARKETPLACE JS
 const equipmentData = [
@@ -53,6 +18,12 @@ const equipmentData = [
             Uso: "Obras residenciais e comerciais",
             Alimentação: "Elétrica",
             Disponibilidade: "Sob consulta"
+        },
+        locacao: {
+            diaria: 120,
+            semanal: 650,
+            quinzenal: 1100,
+            mensal: 1800
         }
     },
     {
@@ -72,6 +43,12 @@ const equipmentData = [
             Uso: "Obras de médio e grande porte",
             Alimentação: "Elétrica",
             Disponibilidade: "Sob consulta"
+        },
+         locacao: {
+            diaria: 100,
+            semanal: 420,
+            quinzenal: 800,
+            mensal: 1200
         }
     },
     {
@@ -516,7 +493,6 @@ let activeCategory = "Todos";
 let currentProduct = null;
 let currentImageIndex = 0;
 
-
 //FUNÇÕES DO CARRINHO
 
 const floatingCart = document.getElementById("floatingCart");
@@ -544,47 +520,63 @@ function closeCart() {
     document.body.style.overflow = "";
 }
 
-function addToCart(product) {
-    const existingItem = cart.find(item => item.id === product.id);
+function addToCart(product, rentalData = null) {
+    const key = rentalData
+        ? `${product.id}-${rentalData.periodo}`
+        : `${product.id}`;
+
+    const existingItem = cart.find(item => item.key === key);
 
     if (existingItem) {
-        existingItem.quantidade += 1;
+        existingItem.quantidade += rentalData ? rentalData.quantidade : 1;
     } else {
         cart.push({
+            key,
             id: product.id,
             nome: product.nome,
             categoria: product.categoria,
             imagem: product.imagens[0],
-            quantidade: 1
+            quantidade: rentalData ? rentalData.quantidade : 1,
+            periodo: rentalData ? rentalData.periodo : null,
+            valorUnitario: rentalData ? rentalData.valorUnitario : null,
+            valorTotal: rentalData ? rentalData.valorTotal : null
         });
     }
 
     updateCartUI();
 }
 
-function increaseItem(productId) {
-    const item = cart.find(product => product.id === productId);
+function increaseItem(productKey) {
+    const item = cart.find(product => product.key === productKey);
     if (!item) return;
 
     item.quantidade += 1;
-    updateCartUI();
-}
 
-function decreaseItem(productId) {
-    const item = cart.find(product => product.id === productId);
-    if (!item) return;
-
-    item.quantidade -= 1;
-
-    if (item.quantidade <= 0) {
-        cart = cart.filter(product => product.id !== productId);
+    if (item.valorUnitario) {
+        item.valorTotal = item.valorUnitario * item.quantidade;
     }
 
     updateCartUI();
 }
 
-function removeItem(productId) {
-    cart = cart.filter(product => product.id !== productId);
+function decreaseItem(productKey) {
+    const item = cart.find(product => product.key === productKey);
+    if (!item) return;
+
+    item.quantidade -= 1;
+
+    if (item.quantidade <= 0) {
+        cart = cart.filter(product => product.key !== productKey);
+    } else if (item.valorUnitario) {
+        item.valorTotal = item.valorUnitario * item.quantidade;
+    }
+
+    updateCartUI();
+}
+
+
+function removeItem(productKey) {
+    cart = cart.filter(product => product.key !== productKey);
     updateCartUI();
 }
 
@@ -607,70 +599,90 @@ function updateCartUI() {
 
     if (cart.length === 0) {
         cartItems.innerHTML = `
-      <div class="cart-empty">
-        <p>Seu carrinho está vazio.</p>
-        <span>Adicione equipamentos para montar seu pedido.</span>
-      </div>
-    `;
+            <div class="cart-empty">
+                <p>Seu carrinho está vazio.</p>
+                <span>Adicione equipamentos para montar seu pedido.</span>
+            </div>
+        `;
         return;
     }
 
     cartItems.innerHTML = cart
         .map(item => `
-      <div class="cart-item">
-        <div class="cart-item-image">
-          <img src="${item.imagem}" alt="${item.nome}">
-        </div>
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="${item.imagem}" alt="${item.nome}">
+                </div>
 
-        <div class="cart-item-info">
-          <h4>${item.nome}</h4>
-          <span>${item.categoria}</span>
+                <div class="cart-item-info">
+                    <h4>${item.nome}</h4>
 
-          <div class="cart-item-actions">
-            <div class="qty-controls">
-              <button class="qty-btn" data-decrease-id="${item.id}">-</button>
-              <div class="qty-value">${item.quantidade}</div>
-              <button class="qty-btn" data-increase-id="${item.id}">+</button>
+                    <div class="cart-item-meta">
+                        <span>${item.categoria}</span>
+                        ${item.periodo ? `<small>Plano: ${getRentalPeriodLabel(item.periodo)}</small>` : ""}
+                    </div>
+
+                    ${item.valorUnitario ? `
+                        <div class="cart-item-pricing">
+                            <p><strong>Valor unitário:</strong> ${formatCurrency(item.valorUnitario)}</p>
+                            <p><strong>Total:</strong> ${formatCurrency(item.valorTotal)}</p>
+                        </div>
+                    ` : ""}
+
+                    <div class="cart-item-actions">
+                        <div class="qty-controls">
+                            <button class="qty-btn" data-decrease-key="${item.key}">-</button>
+                            <div class="qty-value">${item.quantidade}</div>
+                            <button class="qty-btn" data-increase-key="${item.key}">+</button>
+                        </div>
+
+                        <button class="remove-item-btn" data-remove-key="${item.key}">
+                            Remover
+                        </button>
+                    </div>
+                </div>
             </div>
-
-            <button class="remove-item-btn" data-remove-id="${item.id}">
-              Remover
-            </button>
-          </div>
-        </div>
-      </div>
-    `)
+        `)
         .join("");
 
-    const increaseButtons = cartItems.querySelectorAll("[data-increase-id]");
-    const decreaseButtons = cartItems.querySelectorAll("[data-decrease-id]");
-    const removeButtons = cartItems.querySelectorAll("[data-remove-id]");
+    const increaseButtons = cartItems.querySelectorAll("[data-increase-key]");
+    const decreaseButtons = cartItems.querySelectorAll("[data-decrease-key]");
+    const removeButtons = cartItems.querySelectorAll("[data-remove-key]");
 
     increaseButtons.forEach(button => {
         button.addEventListener("click", () => {
-            increaseItem(Number(button.dataset.increaseId));
+            increaseItem(button.dataset.increaseKey);
         });
     });
 
     decreaseButtons.forEach(button => {
         button.addEventListener("click", () => {
-            decreaseItem(Number(button.dataset.decreaseId));
+            decreaseItem(button.dataset.decreaseKey);
         });
     });
 
     removeButtons.forEach(button => {
         button.addEventListener("click", () => {
-            removeItem(Number(button.dataset.removeId));
+            removeItem(button.dataset.removeKey);
         });
     });
 }
 
+
 function generateWhatsappMessage() {
     if (cart.length === 0) return "";
 
-    const lines = cart.map(item => `- ${item.nome} — Quantidade: ${item.quantidade}`);
+    const lines = cart.map(item => {
+        if (item.periodo) {
+            return `- ${item.nome} | Plano: ${getRentalPeriodLabel(item.periodo)} | Quantidade: ${item.quantidade} | Valor unitário: ${formatCurrency(item.valorUnitario)} | Total: ${formatCurrency(item.valorTotal)}`;
+        }
 
-    return `Olá! Gostaria de solicitar um orçamento para locação dos seguintes equipamentos:%0A%0A${lines.join("%0A")}`;
+        return `- ${item.nome} — Quantidade: ${item.quantidade}`;
+    });
+
+    const message = `Olá! Gostaria de solicitar um orçamento para locação dos seguintes equipamentos:\n\n${lines.join("\n")}`;
+
+    return encodeURIComponent(message);
 }
 
 function finishOrderOnWhatsapp() {
@@ -678,8 +690,8 @@ function finishOrderOnWhatsapp() {
         alert("Adicione pelo menos um equipamento ao pedido.");
         return;
     }
-    //NUMERO WHATS---------------------------------------------------------------------------------------------------------------
-    const phone = "5598987575367"; // troque pelo número real
+    //NUMERO WHATS----------------------------------------------------------------------------------------------------------------------
+    const phone = "5598991713898"; // troque pelo número real
     const message = generateWhatsappMessage();
     const url = `https://wa.me/${phone}?text=${message}`;
 
@@ -749,9 +761,9 @@ function renderProducts() {
                 <span>${item.categoria}</span>
 
                 <div class="product-card-actions">
-                <button class="add-to-cart-btn" data-add-id="${item.id}">
-                    Adicionar
-                </button>
+                    <button class="add-to-cart-btn" data-add-id="${item.id}">
+                        Ver opções
+                    </button>
                 </div>
             </div>
             </article>
@@ -778,15 +790,9 @@ function renderProducts() {
             const productId = Number(button.dataset.addId);
             const selectedProduct = equipmentData.find(item => item.id === productId);
 
-            addToCart(selectedProduct);
+            if (!selectedProduct) return;
 
-            button.classList.add("added");
-            button.textContent = "Adicionado";
-
-            setTimeout(() => {
-                button.classList.remove("added");
-                button.textContent = "Adicionar";
-            }, 900);
+            openModal(selectedProduct);
         });
     });
 }
@@ -820,19 +826,25 @@ function updateMainImage() {
 }
 
 //MODAL==================================================================================================
-
 function openModal(product) {
     currentProduct = product;
     currentImageIndex = 0;
+    selectedRentalPeriod = "diaria";
+    selectedRentalQty = 1;
 
     modalCategory.textContent = product.categoria;
     modalTitle.textContent = product.nome;
     modalDescription.textContent = product.descricao;
 
+    renderSpecs(product);
     updateMainImage();
+    updateRentalUI();
+
     modal.classList.add("active");
     document.body.style.overflow = "hidden";
+    setupRentalEvents();
 }
+
 
 function closeModal() {
     modal.classList.remove("active");
@@ -893,9 +905,18 @@ function renderSpecs(product) {
 //-------------------------------------------------------
 
 addToOrderBtn.addEventListener("click", () => {
-    if (!currentProduct) return;
+    if (!currentProduct || !currentProduct.locacao) return;
 
-    addToCart(currentProduct);
+    const valorUnitario = currentProduct.locacao[selectedRentalPeriod] || 0;
+    const valorTotal = valorUnitario * selectedRentalQty;
+
+    addToCart(currentProduct, {
+        periodo: selectedRentalPeriod,
+        quantidade: selectedRentalQty,
+        valorUnitario,
+        valorTotal
+    });
+
     closeModal();
     openCart();
 });

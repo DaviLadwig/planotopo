@@ -19,8 +19,9 @@
 }
 
 .store-header-top {
-    background-image: url('../assets/icon/background.png');
+    background: #8DC63F;
     background-size: cover;
+    padding: 10px;
 }
 
 .store-header-top-inner {
@@ -40,9 +41,13 @@
     min-width: 0;
 }
 
+.store-brand-img {
+    width: 110px;
+}
+
 .store-brand-logo {
     padding-top: 10PX;
-    width: 212px;
+    width: 252px;
     height: auto;
     object-fit: contain;
     flex-shrink: 0;
@@ -66,7 +71,14 @@
 .store-header-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
+    
+}
+
+.store-actions-unic{
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .store-header-icon,
@@ -75,7 +87,7 @@
     height: 46px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.14);
+    background: #244966;
     color: var(--white);
     display: inline-flex;
     align-items: center;
@@ -89,23 +101,6 @@
 .store-cart-btn svg {
     width: 22px;
     height: 22px;
-}
-
-.store-cart-count {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    min-width: 20px;
-    height: 20px;
-    padding: 0 5px;
-    border-radius: 999px;
-    background: #0b1220;
-    color: #ffffff;
-    font-size: 0.72rem;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .store-menu-toggle {
@@ -128,24 +123,25 @@
     border-radius: 999px;
 }
 
+/*area de links header*/
 .store-header-bottom {
     position: relative;
     z-index: 1;
-    background: var(--brand-blue-dark);
+    background: #1c405c;
 }
 
 .store-nav {
-    min-height: 62px;
+    min-height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 42px;
+    gap: 72px;
 }
 
 .store-nav a {
     text-decoration: none;
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1rem;
     position: relative;
 }
@@ -154,7 +150,7 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -3px;
     width: 0;
     height: 2px;
     background: var(--brand-green);
@@ -163,6 +159,7 @@
 
 .store-nav a:hover::after {
     width: 100%;
+    
 }
 
 /* SEARCH */
@@ -172,18 +169,21 @@
 
 .store-search-form {
     width: 100%;
+    display: flex;
+    justify-content: center;
     margin: 0;
 }
 
 .store-search-box {
     position: relative;
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
     min-height: 52px;
+    color: white;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(92, 91, 91, 0.12);
+    border: 1px solid rgb(255, 255, 255);
     backdrop-filter: blur(8px);
 }
 
@@ -559,8 +559,8 @@
 .mobile-header-contact {
     width: 46px;
     height: 46px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.14);
+    border-radius: 99px;
+    background: #234966;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
@@ -621,6 +621,14 @@
     color: #111827;
 }
 
+.linha-vertical {
+    width: 3px;
+    height: 114px;
+    background: rgba(255, 255, 255, 0.65);
+    margin: 0 12px;
+    flex-shrink: 0;
+}
+
 @media (max-width: 1024px) {
 
 
@@ -634,7 +642,7 @@
         position: sticky;
         top: 0;
         z-index: 1200;
-        background-image: url('/assets/icon/background.png');
+        background: #8DC63F;
         box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
     }
 

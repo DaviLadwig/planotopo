@@ -1,5 +1,7 @@
 .site-footer {
-    background: #234966;
+    background-image: url('/assets/icon/background_footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #ffffff;
     padding: 70px 0 0;
     margin-top: 0;
@@ -22,7 +24,7 @@
 }
 
 .footer-logo img {
-    width: 210px;
+    width: 310px;
     height: auto;
     display: block;
 }
@@ -32,6 +34,7 @@
     font-size: 0.98rem;
     line-height: 1.85;
     margin-bottom: 22px;
+    font-weight: bold;
 }
 
 .footer-contact-list {
