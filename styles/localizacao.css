@@ -143,3 +143,10 @@
     border: 0;
     display: block;
 }
+
+@media(max-width:668px){
+    .locations-grid{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,7 +1,5 @@
 .site-footer {
-    background-image: url('/assets/icon/background_footer.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background:#090723 ;
     color: #ffffff;
     padding: 70px 0 0;
     margin-top: 0;
