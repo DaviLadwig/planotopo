@@ -265,14 +265,28 @@
 
 
 @media (max-width: 900px) {
+    .marketplace {
+        padding: 40px 0 60px;
+        margin-top: 0;
+    }
+
     .marketplace-layout {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .marketplace-header {
+        margin: 0 auto 18px;
+    }
+
+    .catalog-main {
+        min-width: 0;
     }
 
     .catalog-mobile-actions {
         display: flex;
         justify-content: flex-start;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
 
     .catalog-sidebar {
@@ -280,10 +294,10 @@
         top: 0;
         left: 0;
         width: min(320px, 86vw);
-        height: 100vh;
+        height: 100dvh;
         z-index: 1400;
         transform: translateX(-100%);
-        transition: 0.3s ease;
+        transition: transform 0.3s ease;
         padding: 14px;
     }
 
@@ -296,6 +310,15 @@
         border-radius: 0 20px 20px 0;
         padding: 18px 14px;
         overflow-y: auto;
+        box-shadow: 18px 0 40px rgba(3, 8, 14, 0.18);
+    }
+
+    .catalog-sidebar-header {
+        margin-bottom: 14px;
+    }
+
+    .catalog-sidebar-header h3 {
+        font-size: 1.15rem;
     }
 
     .catalog-sidebar-close {
@@ -311,6 +334,7 @@
         z-index: 1390;
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
         transition: 0.3s ease;
         display: block;
     }
@@ -318,28 +342,7 @@
     .catalog-sidebar-overlay.active {
         opacity: 1;
         visibility: visible;
-    }
-}
-
-@media (max-width: 860px) {
-    .marketplace-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .catalog-sidebar {
-        position: static;
-    }
-
-    .catalog-sidebar-box {
-        padding: 22px 18px;
-    }
-
-    .catalog-sidebar-header {
-        margin-bottom: 16px;
-    }
-
-    .catalog-sidebar-header h3 {
-        font-size: 1.5rem;
+        pointer-events: auto;
     }
 
     .categories-vertical {
@@ -347,14 +350,11 @@
     }
 
     .categories-vertical .category-btn {
-        min-height: 48px;
-        font-size: 0.96rem;
-        border-radius: 14px;
+        min-height: 46px;
+        font-size: 0.95rem;
+        border-radius: 12px;
     }
 }
-
-
-
 
 @media (max-width: 1024px) {
     .container {
@@ -413,7 +413,22 @@
 
 @media (max-width: 560px) {
     .marketplace {
-        padding: 60px 0;
+        padding: 34px 0 50px;
+    }
+
+    .marketplace-header {
+        margin: 0 auto 14px;
+    }
+
+    .catalog-mobile-actions {
+        margin-bottom: 8px;
+    }
+
+    .catalog-categories-toggle {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: 0.9rem;
+        border-radius: 12px;
     }
 
     .products {
