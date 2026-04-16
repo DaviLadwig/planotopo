@@ -55,20 +55,6 @@
     z-index: 1;
 }
 
-.service-card::after {
-    content: "";
-    position: absolute;
-    left: 12%;
-    right: 12%;
-    bottom: -22px;
-    height: 80px;
-    background: radial-gradient(circle, rgba(23, 63, 149, 0.22) 0%, rgba(23, 63, 149, 0) 75%);
-    opacity: 0;
-    filter: blur(18px);
-    transition: opacity 0.28s ease;
-    z-index: -1;
-}
-
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 22px 42px rgba(15, 23, 42, 0.08);
@@ -105,8 +91,8 @@
     width: 56px;
     height: 56px;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(23, 63, 149, 0.12), rgba(140, 198, 63, 0.16));
-    color: #173f95;
+    background:  rgba(119, 195, 19, 0.77);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
