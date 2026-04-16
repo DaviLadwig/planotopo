@@ -937,11 +937,32 @@ if (finishOnWhatsapp) {
     finishOnWhatsapp.addEventListener("click", finishOrderOnWhatsapp);
 }
 
+//ICONES DE NAVEGAÇÃO PÓS HERO SECTION
+function obterCategoriaDaURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("categoria") || "";
+}
+
+function aplicarCategoriaInicialDaURL() {
+    const categoria = obterCategoriaDaURL().trim();
+    if (!categoria) return;
+
+    activeCategory = categoria;
+    renderCategories();
+    renderProducts();
+
+    const feedback = document.getElementById("searchFeedback");
+    if (feedback) {
+        feedback.innerHTML = `<p>Categoria selecionada: <strong>${categoria}</strong></p>`;
+    }
+}
+
+
+
 renderCategories();
 renderProducts();
 updateCartUI();
 aplicarBuscaInicialDaURL();
+aplicarCategoriaInicialDaURL();
 
 
-
-//ANIMAÇÃO POR CLASSE
