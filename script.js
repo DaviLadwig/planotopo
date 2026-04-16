@@ -44,7 +44,7 @@ const equipmentData = [
             Alimentação: "Elétrica",
             Disponibilidade: "Sob consulta"
         },
-         locacao: {
+        locacao: {
             diaria: 100,
             semanal: 420,
             quinzenal: 800,
@@ -941,3 +941,7 @@ renderCategories();
 renderProducts();
 updateCartUI();
 aplicarBuscaInicialDaURL();
+
+
+
+//ANIMAÇÃO POR CLASSE

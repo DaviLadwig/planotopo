@@ -64,7 +64,8 @@
 
                     <div class="store-actions-unic">
                         <span style="color: white; font-weight: bold; cursor: pointer;">Whatsapp</span>
-                        <a href="https://wa.me/5598987575367" class="mobile-header-contact" aria-label="Telefone"  target="_blank">
+                        <a href="https://wa.me/5598987575367" class="mobile-header-contact" aria-label="Telefone"
+                            target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                                 class="h-6 w-6 text-[#fff] hover:text-[#128C7E] transition-colors duration-300"
                                 fill="currentColor">
@@ -80,7 +81,7 @@
                     <div class="store-actions-unic">
                         <span style="color: white; font-weight: bold; cursor: pointer;">E-mail</span>
                         <a href="mailto:contato@planotopo.com.br" class="store-header-icon desktop-only"
-                            aria-label="E-mail"  target="_blank">
+                            aria-label="E-mail" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor"
                                 class="w-6 h-6 text-white-600 hover:text-[#128C7E] transition-colors duration-300">
@@ -207,7 +208,7 @@
         </div>
 
         <div class="mobile-drawer-socials">
-            <a href="https://www.instagram.com/planotopo_slz/" aria-label="Instagram"  target="_blank">
+            <a href="https://www.instagram.com/planotopo_slz/" aria-label="Instagram" target="_blank">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path
                         d="M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2Z"
@@ -219,7 +220,7 @@
                 </svg>
             </a>
 
-            <a href="https://www.facebook.com/PlanotopoEquipamentos/" aria-label="Facebook"  target="_blank">
+            <a href="https://www.facebook.com/PlanotopoEquipamentos/" aria-label="Facebook" target="_blank">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path
                         d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
@@ -227,7 +228,7 @@
                 </svg>
             </a>
 
-            <a href="linkedin.com/company/planotopo-equipamentos" aria-label="LinkedIn"  target="_blank">
+            <a href="linkedin.com/company/planotopo-equipamentos" aria-label="LinkedIn" target="_blank">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path
                         d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
@@ -247,6 +248,38 @@
         </div>
     </aside>
 
+    <!--BANNERS-->
+    <section class="hero-slider-section">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active">
+                <img src="./assets/images/bannerdesk-4.png" alt="Banner 1">
+            </div>
+
+            <div class="hero-slide">
+                <img src="./assets/images/bannerdesk-3.png" alt="Banner 3">
+            </div>
+
+            <button class="hero-slider-arrow hero-slider-prev" id="heroSliderPrev" aria-label="Banner anterior">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <button class="hero-slider-arrow hero-slider-next" id="heroSliderNext" aria-label="Próximo banner">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="hero-slider-dots" id="heroSliderDots">
+                <button class="hero-slider-dot active" data-slide="0" aria-label="Ir para banner 1"></button>
+                <button class="hero-slider-dot" data-slide="1" aria-label="Ir para banner 2"></button>
+                <button class="hero-slider-dot" data-slide="2" aria-label="Ir para banner 3"></button>
+            </div>
+        </div>
+    </section>
 
     <!-- MARKETPLACE SECTION -->
     <section class="marketplace" id="equipamentos">
@@ -475,6 +508,7 @@
     <script src="categoria.js"></script>
     <script src="header.js"></script>
     <script src="planos.js"></script>
+    <script src="hero.js"></script>
 
 </body>
 

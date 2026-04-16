@@ -1,234 +1,227 @@
-.catalog-preview-section {
-    padding: 110px 0;
+.preview-model-section {
+    width: 100%;
+    padding: 30px;
     background: #f5f7fb;
 }
 
-.catalog-preview-header {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 28px;
-    margin-bottom: 34px;
+.preview-model-container {
+    width: min(92%, 1700px);
+    margin: 0 auto;
 }
 
-.catalog-preview-heading {
-    max-width: 760px;
-}
-
-.catalog-preview-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 38px;
-    padding: 0 16px;
-    border-radius: 999px;
-    background: rgba(23, 63, 149, 0.08);
-    color: #173f95;
-    font-size: 0.82rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-
-.catalog-preview-heading h2 {
-    font-size: 3rem;
-    line-height: 1.08;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 14px;
-    max-width: 860px;
-}
-
-.catalog-preview-heading p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #667085;
-    max-width: 640px;
-    margin: 0;
-}
-
-.catalog-preview-grid {
+.preview-model-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    grid-template-columns: 1.12fr 0.88fr;
+    grid-template-areas:
+        "text action"
+        "image info";
+    gap: 28px 34px;
+    align-items: start;
 }
 
-.catalog-preview-card {
-    background: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid #e9eef5;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.preview-model-text {
+    grid-area: text;
+    max-width: 980px;
 }
 
-.catalog-preview-card::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #173f95 0%, #8cc63f 100%);
-}
-
-.catalog-preview-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.07);
-}
-
-.catalog-preview-image {
-    height: 260px;
-    padding: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-}
-
-.catalog-preview-image img {
-    max-width: 100%;
-    max-height:250px;
-    object-fit: contain;
-    transition: transform 0.28s ease;
-}
-
-.catalog-preview-card:hover .catalog-preview-image img {
-    transform: scale(1.03);
-}
-
-.catalog-preview-content {
-    padding: 14px 14px 16px;
-}
-
-.catalog-preview-category {
+.preview-model-eyebrow {
     display: inline-flex;
     align-items: center;
-    min-height: 28px;
-    padding: 0 12px;
-    border-radius: 999px;
-    background: #f2f5fa;
-    color: #60708a;
-    font-size: 0.75rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.catalog-preview-title {
-    font-size: 1rem;
-    line-height: 1.3;
-    color: #0f172a;
-    font-weight: 700;
-    margin: 0;
-}
-
-.catalog-preview-footer {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.catalog-preview-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
-    min-height: 54px;
-    padding: 0 28px;
-    border-radius: 16px;
-    background: #173f95;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: 0.25s ease;
-    box-shadow: 0 16px 30px rgba(23, 63, 149, 0.16);
+    color: #8a8f98;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 22px;
 }
 
-.catalog-preview-cta:hover {
-    transform: translateY(-3px);
-    background: #133781;
-}
-
-.catalog-preview-cta span {
-    font-size: 1.1rem;
-    line-height: 1;
-}
-
-.desktop-catalog-cta {
+.preview-model-eyebrow svg {
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
 }
 
-.mobile-catalog-cta {
-    display: none;
+.preview-model-text h2 {
+    margin: 0 0 26px;
+    font-size: clamp(2.2rem, 4vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: #000000;
+    font-weight: 400;
+    max-width: 980px;
+}
+
+.preview-model-text p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 1.12rem;
+    line-height: 1.65;
+    color: #6f7887;
+}
+
+.preview-model-action {
+    grid-area: action;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 72px;
+}
+
+.preview-model-button {
+    min-width: 360px;
+    min-height: 74px;
+    padding: 0 36px;
+    border-radius: 16px;
+    background: #234966;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.preview-model-button:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 14px 26px rgba(31, 18, 143, 0.18),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.preview-model-button span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.preview-model-image-card {
+    grid-area: image;
+    border-radius: 24px;
+    overflow: hidden;
+    min-height: 430px;
+    background: #e9edf3;
+}
+
+.preview-model-image-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.preview-model-info-card {
+    grid-area: info;
+    border-radius: 24px;
+    background: #234966;
+    color: #ffffff;
+    min-height: 430px;
+    padding: 64px 64px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.preview-model-info-card h3 {
+    margin: 0 0 22px;
+    font-size: 2.1rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.preview-model-info-card p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.96);
+    max-width: 520px;
 }
 
 @media (max-width: 1200px) {
-    .catalog-preview-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 1100px) {
-    .catalog-preview-header {
-        flex-direction: column;
-        align-items: start;
+    .preview-model-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "text"
+            "action"
+            "image"
+            "info";
     }
 
-    .catalog-preview-heading h2 {
-        font-size: 2.5rem;
+    .preview-model-action {
+        justify-content: flex-start;
+        padding-top: 0;
     }
 
-    .desktop-catalog-cta {
-        display: none;
+    .preview-model-button {
+        min-width: 320px;
     }
 
-    .mobile-catalog-cta {
-        display: inline-flex;
+    .preview-model-image-card,
+    .preview-model-info-card {
+        min-height: 360px;
+    }
+
+    .preview-model-info-card {
+        padding: 42px 36px;
     }
 }
 
 @media (max-width: 768px) {
-    .catalog-preview-section {
-        padding: 80px 0;
+    .preview-model-section {
+        padding: 40px 0 0;
     }
 
-    .catalog-preview-heading h2 {
-        font-size: 2rem;
-        line-height: 1.15;
+    .preview-model-container {
+        width: calc(100% - 20px);
     }
 
-    .catalog-preview-heading p {
+    .preview-model-grid {
+        gap: 18px;
+    }
+
+    .preview-model-eyebrow {
+        font-size: 0.88rem;
+        margin-bottom: 16px;
+    }
+
+    .preview-model-text h2 {
+        font-size: 2.3rem;
+        line-height: 1.05;
+        margin-bottom: 18px;
+    }
+
+    .preview-model-text p {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .preview-model-button {
+        width: 100%;
+        min-width: 0;
+        min-height: 58px;
+        padding: 0 20px;
+        border-radius: 14px;
         font-size: 0.95rem;
     }
 
-    .catalog-preview-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .catalog-preview-card {
+    .preview-model-image-card,
+    .preview-model-info-card {
+        min-height: 260px;
         border-radius: 18px;
     }
 
-    .catalog-preview-image {
-        height: 190px;
-        padding: 14px;
+    .preview-model-info-card {
+        padding: 28px 22px;
     }
 
-    .catalog-preview-image img {
-        max-height: 130px;
+    .preview-model-info-card h3 {
+        font-size: 1.7rem;
+        margin-bottom: 14px;
     }
 
-    .catalog-preview-content {
-        padding: 12px 12px 14px;
-    }
-
-    .catalog-preview-title {
+    .preview-model-info-card p {
         font-size: 0.95rem;
-    }
-
-    .catalog-preview-cta {
-        width: 100%;
-        min-height: 50px;
-        padding: 0 20px;
-        border-radius: 14px;
+        line-height: 1.65;
     }
 }

@@ -253,13 +253,39 @@
 
 
     <!--HERO SECTION BANNERL-->
-    <section class="hero-banner-full">
-        <div class="hero-banner-wrap">
-            <picture>
-                <source media="(max-width: 767px)" srcset="assets/images/bannermob.png">
-                <source media="(max-width: 1024px)" srcset="assets/images/bannertab.png">
-                <img src="assets/images/bannerdesk.png" alt="Banner comercial Planotopo">
-            </picture>
+    <section class="hero-slider-section">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active">
+                <img src="./assets/images/bannerdesk-1.png" alt="Banner 1">
+            </div>
+
+            <div class="hero-slide">
+                <img src="./assets/images/bannerdesk-2.png" alt="Banner 2">
+            </div>
+
+            <div class="hero-slide">
+                <img src="./assets/images/bannerdesk-3.png" alt="Banner 3">
+            </div>
+
+            <button class="hero-slider-arrow hero-slider-prev" id="heroSliderPrev" aria-label="Banner anterior">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <button class="hero-slider-arrow hero-slider-next" id="heroSliderNext" aria-label="Próximo banner">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="hero-slider-dots" id="heroSliderDots">
+                <button class="hero-slider-dot active" data-slide="0" aria-label="Ir para banner 1"></button>
+                <button class="hero-slider-dot" data-slide="1" aria-label="Ir para banner 2"></button>
+                <button class="hero-slider-dot" data-slide="2" aria-label="Ir para banner 3"></button>
+            </div>
         </div>
     </section>
 
@@ -267,8 +293,8 @@
     <section class="about-company" id="sobre">
         <div class="container">
             <div class="about-company-grid">
-                <div class="about-company-content">
-                    <span class="section-tag">Sobre a empresa</span>
+                <div class="about-company-content reveal reveal-up delay-1">
+                    <span class="section-tag ">Sobre a empresa</span>
 
                     <h2>Referência em locação e manutenção de equipamentos para obras</h2>
 
@@ -308,7 +334,7 @@
                 </div>
 
                 <div class="about-company-media">
-                    <div class="about-company-image">
+                    <div class="about-company-image reveal reveal-left">
                         <img src="./assets/images/sobre-img.png" alt="Plano Topo Equipamentos">
                     </div>
                 </div>
@@ -321,7 +347,7 @@
     <section class="how-section" id="como-funciona">
         <div class="container">
             <div class="how-grid">
-                <div class="how-content">
+                <div class="how-content  reveal reveal-left dealy-4">
                     <span class="section-tag">Como funciona</span>
                     <h2>Solicite seu orçamento de forma simples e rápida</h2>
                     <p>
@@ -329,11 +355,10 @@
                         equipamento, envia o pedido e recebe atendimento direto no WhatsApp.
                     </p>
 
-                    <a href="./catalogo.html" class="how-main-btn">Ir para o catálogo</a>
                 </div>
 
                 <div class="how-steps">
-                    <article class="how-step">
+                    <article class="how-step reveal reveal-scale dealy-1">
                         <div class="how-step-number">01</div>
                         <div class="how-step-text">
                             <h3>Escolha os equipamentos</h3>
@@ -341,7 +366,7 @@
                         </div>
                     </article>
 
-                    <article class="how-step">
+                    <article class="how-step reveal reveal-scale dealy-2">
                         <div class="how-step-number">02</div>
                         <div class="how-step-text">
                             <h3>Monte o seu pedido</h3>
@@ -349,7 +374,7 @@
                         </div>
                     </article>
 
-                    <article class="how-step">
+                    <article class="how-step reveal reveal-scale dealy-3">
                         <div class="how-step-number">03</div>
                         <div class="how-step-text">
                             <h3>Finalize no WhatsApp</h3>
@@ -361,7 +386,7 @@
         </div>
     </section>
 
-    <!-- PREVIEW DO CATALOGO (ALGUNS PRODUTOS AMOSTRA)-->
+    <!-- PREVIEW DO CATALOGO (ALGUNS PRODUTOS AMOSTRA)
     <section class="catalog-preview-section">
         <div class="container">
             <div class="catalog-preview-header">
@@ -434,9 +459,47 @@
             </div>
         </div>
     </section>
+-->
+
+    <section class="preview-model-section">
+        <div class="preview-model-container">
+            <div class="preview-model-grid">
+                <div class="preview-model-text reveal reveal-down dealy-2">
+
+                    <h2>Soluções integradas para o setor de infraestrutura</h2>
+
+                    <p>
+                        Atuamos com excelência na locação de máquinas e equipamentos pesados,
+                        execução de serviços de terraplenagem e movimentação de solo, além do
+                        transporte seguro de maquinário e cargas indivisíveis.
+                    </p>
+                </div>
+
+                <div class="preview-model-action reveal reveal-right">
+                    <a href="catalogo.html" class="preview-model-button">
+                        Catálogo de equipamentos
+                        <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="preview-model-image-card reveal reveal-up">
+                    <img src="./assets/images/bannercatalogo.png" alt="Máquina pesada em operação">
+                </div>
+
+                <div class="preview-model-info-card reveal reveal-scale dealy-3">
+                    <h3>Missão</h3>
+                    <p>
+                        Nosso compromisso é entregar produtividade com segurança, qualidade e
+                        pontualidade, atendendo rigorosamente às normas técnicas e aos mais altos
+                        padrões exigidos pelo mercado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    <!--SERVIÇOS AUTORIZADOS-->
+    <!--SERVIÇOS AUTORIZADOS
     <section class="assistencia-section">
         <div class="assistencia-bg-glow assistencia-glow-1"></div>
         <div class="assistencia-bg-glow assistencia-glow-2"></div>
@@ -470,12 +533,35 @@
             </div>
         </div>
     </section>
+    -->
+
+    <!--MARCAS DE FERRAMENTAS-->
+    <section class="brands-carousel-section">
+        <div class="container">
+            <div class="brands-carousel">
+                <div class="brands-track">
+                    <div class="brand-logo"><img src="./assets/icon/makita-logo.png" alt="Makita"></div>
+                    <div class="brand-logo"><img src="./assets/icon/buffalo-logo.png" alt="Buffalo"></div>
+                    <div class="brand-logo"><img src="./assets/icon/Menegotti-logo.png" alt="Menegotti"></div>
+                    <div class="brand-logo"><img src="./assets/icon/bosch-logo.png" alt="Bosch"></div>
+                    <div class="brand-logo"><img src="./assets/icon/csm.png" alt="CSM"></div>
+
+                    <!-- repetição para loop infinito -->
+                    <div class="brand-logo"><img src="./assets/icon/makita-logo.png" alt="Makita"></div>
+                    <div class="brand-logo"><img src="./assets/icon/buffalo-logo.png" alt="Buffalo"></div>
+                    <div class="brand-logo"><img src="./assets/icon/Menegotti-logo.png" alt="Menegotti"></div>
+                    <div class="brand-logo"><img src="./assets/icon/bosch-logo-white.png" alt="Bosch"></div>
+                    <div class="brand-logo"><img src="./assets/icon/csm.png" alt="CSM"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--ESCOLHA A PLANOTOPO-->
     <section class="why-planotopo-section">
         <div class="container">
             <div class="why-planotopo-layout">
-                <div class="why-planotopo-content">
+                <div class="why-planotopo-content reveal reveal-right">
                     <span class="why-planotopo-badge">Por que escolher a Planotopo</span>
 
                     <h2>Mais confiança, agilidade e suporte para a sua obra</h2>
@@ -499,7 +585,7 @@
                     </div>
                 </div>
 
-                <div class="why-planotopo-timeline">
+                <div class="why-planotopo-timeline reveal reveal-down">
                     <div class="timeline-track"></div>
 
                     <article class="timeline-row">
@@ -552,7 +638,7 @@
 
     <!--SECTION PERGUNTAS FREQUENTES-->
 
-    <section class="faq-section" id="duvidas">
+    <section class="faq-section reveal reveal-up" id="duvidas">
         <div class="container">
             <div class="faq-header">
                 <span class="section-tag">Dúvidas frequentes</span>
@@ -638,7 +724,7 @@
     <!--LOCALIZAÇÃO PLANOTOPO-->
     <section class="locations-section" id="localizacao">
         <div class="container">
-            <div class="locations-header">
+            <div class="locations-header reveal reveal-up">
                 <span class="section-badge">Localização</span>
                 <h2>Encontre a unidade mais próxima</h2>
                 <p>
@@ -647,10 +733,10 @@
             </div>
 
             <div class="locations-grid">
-                <article class="location-card location-card-rental">
+                <article class="location-card location-card-rental reveal reveal-left delay-4">
                     <div class="location-card-topline"></div>
 
-                    <div class="location-info">
+                    <div class="location-info ">
                         <span class="location-tag">Locação</span>
                         <h3>Unidade de Locação</h3>
                         <p class="location-subtext">Atendimento para locação de equipamentos e suporte comercial.</p>
@@ -675,7 +761,7 @@
                     </div>
                 </article>
 
-                <article class="location-card location-card-sales">
+                <article class="location-card location-card-sales reveal reveal-right delay-4">
                     <div class="location-card-topline"></div>
 
                     <div class="location-info">
@@ -711,7 +797,7 @@
     <section class="atendimento-section" id="contato">
         <div class="container">
             <div class="atendimento-layout">
-                <div class="atendimento-content">
+                <div class="atendimento-content reveal reveal-scale dealy-4">
                     <span class="atendimento-badge">Atendimento rápido</span>
 
                     <h2>Nossa equipe está pronta para atender você</h2>
@@ -733,7 +819,7 @@
                     </div>
                 </div>
 
-                <div class="atendimento-image">
+                <div class="atendimento-image reveal reveal.is-visible dealy-3">
                     <img src="./assets/images/atendimento.jpg" alt="Equipe de atendimento">
                 </div>
             </div>
@@ -815,6 +901,29 @@
     <script src="header.js"></script>
     <script src="planos.js"></script>
     <script src="faq.js"></script>
+    <script src="hero.js"></script>
+
+    <!--ANIMAÇÃO POR CLASSE-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const animatedElements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            animatedElements.forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
 
 
 </body>
