@@ -19,10 +19,10 @@
 
 .brands-premium-header h2 {
     margin: 0 0 16px;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 4vw, 4rem);
     line-height: 1.1;
     color: #111827;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: -0.03em;
 }
 

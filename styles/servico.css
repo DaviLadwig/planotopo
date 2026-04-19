@@ -24,10 +24,10 @@
 }
 
 .services-header h2 {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 4vw, 4rem);
     line-height: 1.1;
     color: #0f172a;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 16px;
 }
 

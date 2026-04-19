@@ -29,9 +29,9 @@
 }
 
 .atendimento-content h2 {
-    font-size: 3.3rem;
+    font-size: clamp(1.8rem, 4vw, 4rem);
     line-height: 1.08;
-    font-weight: 700;
+    font-weight: 500;
     color: #0f172a;
     margin-bottom: 22px;
     max-width: 620px;

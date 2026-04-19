@@ -42,7 +42,7 @@
 
 .preview-model-text h2 {
     margin: 0 0 26px;
-    font-size: clamp(2.2rem, 4vw, 4.2rem);
+    font-size: clamp(1.8rem, 4vw, 4rem);
     line-height: 1.02;
     letter-spacing: -0.04em;
     color: #000000;

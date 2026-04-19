@@ -17,7 +17,7 @@
 
 .how-content h2 {
     margin: 0 0 16px;
-    font-size: clamp(2.1rem, 4vw, 3.1rem);
+    font-size: clamp(1.8rem, 4vw, 4rem);
     line-height: 1.08;
     letter-spacing: -0.03em;
     color: #111827;
