@@ -965,4 +965,3 @@ updateCartUI();
 aplicarBuscaInicialDaURL();
 aplicarCategoriaInicialDaURL();
 
-

@@ -12,7 +12,7 @@
     aspect-ratio: 1920 / 650;
     max-height: 650px;
     min-height: 320px;
-    border-radius: 28px;
+    border-radius: 10px;
     overflow: hidden;
     background: #ffffff;
     box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
