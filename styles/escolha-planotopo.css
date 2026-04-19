@@ -1,211 +1,187 @@
-.why-planotopo-section {
+.why-planotopo-minimal {
     padding: 110px 0;
-    background: #f5f7fb;
+    background: #f6f7f5;
 }
 
-.why-planotopo-layout {
+.why-minimal__container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 72px;
     align-items: start;
 }
 
-.why-planotopo-content {
+.why-minimal__left {
     max-width: 620px;
 }
 
-.why-planotopo-badge {
+.why-minimal__tag {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 0 20px;
+    padding: 12px 20px;
     border-radius: 999px;
-    background: rgba(139, 196, 65, 0.12);
-    color: #6f9f2a;
-    font-size: 0.92rem;
-    font-weight: 700;
-    margin-bottom: 24px;
+    background: rgba(140, 198, 63, 0.10);
+    color: #79a93a;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 26px;
 }
 
-.why-planotopo-content h2 {
-    font-size: 3.2rem;
-    line-height: 1.08;
-    color: #0f172a;
-    font-weight: 700;
-    margin-bottom: 24px;
-    max-width: 560px;
-}
-
-.why-planotopo-description {
-    font-size: 1.08rem;
-    line-height: 1.9;
-    color: #667085;
-    margin-bottom: 32px;
-    max-width: 560px;
-}
-
-.why-planotopo-highlights {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-}
-
-.why-highlight-inline {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.why-highlight-inline strong {
-    font-size: 1.05rem;
+.why-minimal__title {
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
     color: #111827;
     font-weight: 700;
+    margin: 0 0 24px;
 }
 
-.why-highlight-inline span {
-    font-size: 0.96rem;
+.why-minimal__text {
+    font-size: 1.05rem;
+    line-height: 1.9;
     color: #667085;
-    line-height: 1.7;
+    margin: 0 0 42px;
 }
 
-.why-planotopo-timeline {
+.why-minimal__infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 38px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.why-minimal__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 260px;
+}
+
+.why-minimal__info strong {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.why-minimal__info span {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #667085;
+}
+
+.why-minimal__right {
     position: relative;
-    padding-left: 34px;
+    padding-left: 26px;
 }
 
-.timeline-track {
+.why-minimal__line {
     position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 2px;
-    height: calc(100% - 16px);
-    background: linear-gradient(to bottom, #8bc441 0%, rgba(139, 196, 65, 0.15) 100%);
+    left: 15px;
+    top: 4px;
+    bottom: 4px;
+    width: 1px;
+    background: rgba(140, 198, 63, 0.45);
 }
 
-.timeline-row {
+.why-minimal__item {
     position: relative;
     display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 26px;
+    grid-template-columns: 18px 1fr;
+    column-gap: 24px;
     align-items: start;
-    padding-bottom: 34px;
+    margin-bottom: 42px;
 }
 
-.timeline-row:last-child {
-    padding-bottom: 0;
+.why-minimal__item:last-child {
+    margin-bottom: 0;
 }
 
-.timeline-dot {
+.why-minimal__dot {
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+    margin-left: 0;
+    border-radius: 50%;
+    background: #8cc63f;
+    box-shadow: 0 0 0 7px rgba(140, 198, 63, 0.10);
     position: relative;
     z-index: 2;
-    width: 18px;
-    height: 18px;
-    margin-top: 6px;
-    border-radius: 50%;
-    background: #8bc441;
-    box-shadow: 0 0 0 8px rgba(139, 196, 65, 0.10);
 }
 
-.timeline-content h3 {
+.why-minimal__content h3 {
     font-size: 1.55rem;
-    color: #0f172a;
+    line-height: 1.2;
+    color: #111827;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
 }
 
-.timeline-content p {
+.why-minimal__content p {
     margin: 0;
-    font-size: 1.02rem;
+    font-size: 1rem;
     line-height: 1.85;
     color: #667085;
-    max-width: 560px;
+    max-width: 470px;
 }
 
-@media (max-width: 1024px) {
-    .why-planotopo-layout {
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-
-    .why-planotopo-content {
-        max-width: 100%;
-    }
-
-    .why-planotopo-content h2 {
-        max-width: 100%;
-        font-size: 2.6rem;
-    }
-
-    .why-planotopo-description {
-        max-width: 100%;
-    }
-
-    .timeline-content p {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .why-planotopo-section {
+@media (max-width: 991px) {
+    .why-planotopo-minimal {
         padding: 80px 0;
     }
 
-    .why-planotopo-layout {
-        gap: 30px;
+    .why-minimal__container {
+        grid-template-columns: 1fr;
+        gap: 52px;
     }
 
-    .why-planotopo-badge {
-        min-height: 38px;
-        padding: 0 16px;
-        font-size: 0.82rem;
-        margin-bottom: 18px;
+    .why-minimal__left {
+        max-width: 100%;
     }
 
-    .why-planotopo-content h2 {
-        font-size: 2rem;
-        line-height: 1.14;
-        margin-bottom: 18px;
+    .why-minimal__right {
+        padding-left: 22px;
     }
 
-    .why-planotopo-description {
-        font-size: 0.98rem;
+    .why-minimal__line {
+        left: 12px;
+    }
+
+    .why-minimal__item {
+        grid-template-columns: 16px 1fr;
+        column-gap: 20px;
+        margin-bottom: 34px;
+    }
+}
+
+@media (max-width: 640px) {
+    .why-planotopo-minimal {
+        padding: 70px 0;
+    }
+
+    .why-minimal__title {
+        font-size: 2.25rem;
+        line-height: 1.06;
+    }
+
+    .why-minimal__text {
+        font-size: 1rem;
         line-height: 1.8;
-        margin-bottom: 24px;
     }
 
-    .why-planotopo-highlights {
-        flex-direction: column;
-        gap: 16px;
+    .why-minimal__content h3 {
+        font-size: 1.2rem;
     }
 
-    .why-planotopo-timeline {
-        padding-left: 24px;
-    }
-
-    .timeline-track {
-        left: 6px;
-    }
-
-    .timeline-row {
-        grid-template-columns: 18px 1fr;
-        gap: 18px;
-        padding-bottom: 24px;
-    }
-
-    .timeline-dot {
-        width: 14px;
-        height: 14px;
-        box-shadow: 0 0 0 6px rgba(139, 196, 65, 0.10);
-    }
-
-    .timeline-content h3 {
-        font-size: 1.12rem;
-        margin-bottom: 8px;
-    }
-
-    .timeline-content p {
-        font-size: 0.94rem;
+    .why-minimal__content p,
+    .why-minimal__info span {
+        font-size: 0.96rem;
         line-height: 1.75;
     }
-}   
+
+    .why-minimal__infos {
+        gap: 22px;
+    }
+}
