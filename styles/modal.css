@@ -504,3 +504,285 @@
     RESPONSIVIDADE DO MODAL ES´TA NA PAGINA 'MARKETPLACE.CSS'
     ==============================================================
     */
+
+
+    /*
+    ==============================================================
+    MODAL DE MANUTENÇÃO
+    ==============================================================
+    */
+
+
+    .custom-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.28s ease, visibility 0.28s ease;
+    }
+
+    .custom-modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .custom-modal__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(8, 18, 40, 0.55);
+        backdrop-filter: blur(4px);
+    }
+
+    .custom-modal__dialog {
+        position: relative;
+        width: 100%;
+        max-width: 860px;
+        /* menor no desktop */
+        max-height: 88vh;
+        /* evita estourar a tela */
+        background: #ffffff;
+        border-radius: 26px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.20);
+        transform: translateY(18px) scale(0.98);
+        transition: transform 0.3s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-modal.active .custom-modal__dialog {
+        transform: translateY(0) scale(1);
+    }
+
+    .custom-modal__content {
+        padding: 42px 52px 40px;
+        /* mais respiro nas bordas */
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+
+    .custom-modal__close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 42px;
+        height: 42px;
+        border: none;
+        border-radius: 50%;
+        background: #f3f6fb;
+        color: #173f95;
+        font-size: 1.6rem;
+        line-height: 1;
+        cursor: pointer;
+        transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+        z-index: 5;
+    }
+
+    .custom-modal__close:hover {
+        background: #173f95;
+        color: #fff;
+        transform: rotate(90deg);
+    }
+
+    .custom-modal__tag {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(140, 198, 63, 0.12);
+        color: #6f9f2a;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .custom-modal__content h2 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        line-height: 1.04;
+        color: #10203f;
+        margin-bottom: 18px;
+        letter-spacing: -0.03em;
+        max-width: 760px;
+    }
+
+    .custom-modal__content>p {
+        font-size: 1rem;
+        line-height: 1.9;
+        color: #5f6f86;
+        margin-bottom: 26px;
+    }
+
+    .custom-modal__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+
+    .custom-modal__item {
+        padding: 24px;
+        border-radius: 20px;
+        background: #f8fafc;
+        border: 1px solid rgba(23, 63, 149, 0.08);
+    }
+
+    .custom-modal__item h3 {
+        font-size: 1.15rem;
+        color: #173f95;
+        margin-bottom: 10px;
+    }
+
+    .custom-modal__item p {
+        font-size: 0.97rem;
+        line-height: 1.8;
+        color: #667085;
+        margin: 0;
+    }
+
+    .custom-modal__footer-text {
+        margin-bottom: 26px;
+    }
+
+    .custom-modal__cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 24px;
+        border-radius: 999px;
+        background: #173f95;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .custom-modal__cta:hover {
+        background: #8cc63f;
+        transform: translateY(-2px);
+    }
+
+    body.modal-open {
+        overflow: hidden;
+    }
+
+    /* TABLET */
+    @media (max-width: 992px) {
+        .custom-modal__dialog {
+            max-width: 760px;
+        }
+
+        .custom-modal__content {
+            padding: 34px 32px 32px;
+        }
+
+        .custom-modal__content h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        .custom-modal {
+            padding: 12px;
+            align-items: center;
+        }
+
+        .custom-modal__dialog {
+            max-width: 100%;
+            max-height: 82vh;
+            border-radius: 22px;
+        }
+
+        .custom-modal__content {
+            padding: 22px 18px 22px;
+        }
+
+        .custom-modal__close {
+            top: 10px;
+            right: 10px;
+            width: 38px;
+            height: 38px;
+            font-size: 1.35rem;
+        }
+
+        .custom-modal__tag {
+            margin-bottom: 14px;
+            padding: 8px 14px;
+            font-size: 0.82rem;
+        }
+
+        .custom-modal__content h2 {
+            font-size: 1.9rem;
+            line-height: 1.08;
+            margin-bottom: 16px;
+            max-width: 92%;
+        }
+
+        .custom-modal__content>p {
+            font-size: 0.98rem;
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .custom-modal__grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .custom-modal__item {
+            padding: 18px;
+            border-radius: 18px;
+        }
+
+        .custom-modal__item h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .custom-modal__item p {
+            font-size: 0.94rem;
+            line-height: 1.7;
+        }
+
+        .custom-modal__footer-text {
+            margin-bottom: 20px;
+        }
+
+        .custom-modal__cta {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 0.98rem;
+        }
+    }
+
+    /* MOBILE PEQUENO */
+    @media (max-width: 480px) {
+        .custom-modal {
+            padding: 10px;
+        }
+
+        .custom-modal__dialog {
+            max-height: 80vh;
+            border-radius: 20px;
+        }
+
+        .custom-modal__content {
+            padding: 20px 16px 18px;
+        }
+
+        .custom-modal__content h2 {
+            font-size: 1.65rem;
+            max-width: 88%;
+        }
+
+        .custom-modal__close {
+            width: 34px;
+            height: 34px;
+            font-size: 1.2rem;
+        }
+    }
